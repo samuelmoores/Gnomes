@@ -1,0 +1,71 @@
+[gd_scene format=3 uid="uid://e8285gx76yeb"]
+
+[ext_resource type="Texture2D" uid="uid://cmlesdcvr7yr2" path="res://icon.svg" id="1_4cvuw"]
+[ext_resource type="Script" uid="uid://dec6udi7xcnm3" path="res://path_follow_2d.gd" id="1_j2eoc"]
+
+[sub_resource type="Curve2D" id="Curve2D_7mckg"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -635, -96, 0, 0, 0, 0, -207, -83, 0, 0, 0, 0, -204, 176, 0, 0, 0, 0, 672, 188)
+}
+point_count = 4
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7mckg"]
+size = Vector2(59, 63)
+
+[node name="Node2D" type="Node2D" unique_id=2096707777]
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1773464010]
+offset_left = -603.0
+offset_top = -337.0
+offset_right = -563.0
+offset_bottom = -297.0
+scale = Vector2(30.271732, 17.000078)
+color = Color(0.5729883, 0.5729883, 0.5729883, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="." unique_id=1485858353]
+offset_left = -226.0
+offset_top = -111.000015
+offset_right = -186.0
+offset_bottom = -71.000015
+scale = Vector2(1, 7.679999)
+
+[node name="ColorRect3" type="ColorRect" parent="." unique_id=265593940]
+offset_left = -530.0
+offset_top = -76.0
+offset_right = -490.0
+offset_bottom = -36.0
+rotation = -1.5420468
+scale = Vector2(1, 7.679999)
+
+[node name="ColorRect4" type="ColorRect" parent="." unique_id=515963173]
+offset_left = -189.00003
+offset_top = 195.0
+offset_right = -149.00003
+offset_bottom = 235.0
+rotation = -1.559404
+scale = Vector2(1, 20.41968)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=528014173]
+
+[node name="Path2D" type="Path2D" parent="." unique_id=553770072]
+curve = SubResource("Curve2D_7mckg")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D" unique_id=1050345441]
+position = Vector2(-635, -96)
+rotation = 0.030364497
+rotates = false
+loop = false
+script = ExtResource("1_j2eoc")
+
+[node name="Enemy" type="CharacterBody2D" parent="Path2D/PathFollow2D" unique_id=1429324363]
+modulate = Color(1, 0.14117648, 1, 1)
+position = Vector2(12.75116, -8.390984)
+rotation = -0.030364497
+
+[node name="Sprite2D" type="Sprite2D" parent="Path2D/PathFollow2D/Enemy" unique_id=89219674]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_4cvuw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Path2D/PathFollow2D/Enemy" unique_id=1997980859]
+position = Vector2(0.5, -0.5)
+shape = SubResource("RectangleShape2D_7mckg")
