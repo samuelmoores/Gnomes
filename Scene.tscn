@@ -1,7 +1,9 @@
 [gd_scene format=3 uid="uid://e8285gx76yeb"]
 
 [ext_resource type="Texture2D" uid="uid://cmlesdcvr7yr2" path="res://icon.svg" id="1_4cvuw"]
-[ext_resource type="Script" uid="uid://dec6udi7xcnm3" path="res://path_follow_2d.gd" id="1_j2eoc"]
+[ext_resource type="Script" uid="uid://0eg0fvxnhy0m" path="res://game.gd" id="1_7mckg"]
+[ext_resource type="Script" uid="uid://dec6udi7xcnm3" path="res://enemy.gd" id="1_j2eoc"]
+[ext_resource type="Script" uid="uid://1mt3vmqmetjo" path="res://tower.gd" id="4_7mckg"]
 
 [sub_resource type="Curve2D" id="Curve2D_7mckg"]
 _data = {
@@ -10,9 +12,13 @@ _data = {
 point_count = 4
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7mckg"]
-size = Vector2(59, 63)
+size = Vector2(57, 56.999996)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_j2eoc"]
+radius = 466.01718
 
 [node name="Node2D" type="Node2D" unique_id=2096707777]
+script = ExtResource("1_7mckg")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1773464010]
 offset_left = -603.0
@@ -66,6 +72,17 @@ rotation = -0.030364497
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("1_4cvuw")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Path2D/PathFollow2D/Enemy" unique_id=1997980859]
-position = Vector2(0.5, -0.5)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Path2D/PathFollow2D/Enemy" unique_id=1983423159]
+position = Vector2(-0.5, -0.5000076)
 shape = SubResource("RectangleShape2D_7mckg")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1407531790]
+script = ExtResource("4_7mckg")
+
+[node name="Tower" type="Sprite2D" parent="Area2D" unique_id=1508416952]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_4cvuw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1952658084]
+scale = Vector2(0.5, 0.5)
+shape = SubResource("CircleShape2D_j2eoc")
