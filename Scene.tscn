@@ -1,9 +1,11 @@
 [gd_scene format=3 uid="uid://e8285gx76yeb"]
 
 [ext_resource type="Texture2D" uid="uid://cmlesdcvr7yr2" path="res://icon.svg" id="1_4cvuw"]
-[ext_resource type="Script" uid="uid://0eg0fvxnhy0m" path="res://game.gd" id="1_7mckg"]
-[ext_resource type="Script" uid="uid://dec6udi7xcnm3" path="res://enemy.gd" id="1_j2eoc"]
-[ext_resource type="Script" uid="uid://1mt3vmqmetjo" path="res://tower.gd" id="4_7mckg"]
+[ext_resource type="Script" uid="uid://0eg0fvxnhy0m" path="res://scripts/game.gd" id="1_7mckg"]
+[ext_resource type="Script" uid="uid://dec6udi7xcnm3" path="res://scripts/enemy.gd" id="1_j2eoc"]
+[ext_resource type="Script" uid="uid://d30dg1dlwyof2" path="res://scripts/enemy_spawner.gd" id="2_eort7"]
+[ext_resource type="Script" uid="uid://bgnu3oy6oxfbw" path="res://scripts/gnome.gd" id="4_7mckg"]
+[ext_resource type="Script" uid="uid://ulffx6dvpimf" path="res://scripts/flamingo.gd" id="5_66br4"]
 
 [sub_resource type="Curve2D" id="Curve2D_7mckg"]
 _data = {
@@ -16,6 +18,9 @@ size = Vector2(57, 56.999996)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_j2eoc"]
 radius = 466.01718
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_eort7"]
+radius = 66.1211
 
 [node name="Node2D" type="Node2D" unique_id=2096707777]
 script = ExtResource("1_7mckg")
@@ -56,6 +61,9 @@ scale = Vector2(1, 20.41968)
 [node name="Path2D" type="Path2D" parent="." unique_id=553770072]
 curve = SubResource("Curve2D_7mckg")
 
+[node name="Node" type="Node" parent="Path2D" unique_id=1713786854]
+script = ExtResource("2_eort7")
+
 [node name="PathFollow2D" type="PathFollow2D" parent="Path2D" unique_id=1050345441]
 position = Vector2(-635, -96)
 rotation = 0.030364497
@@ -79,10 +87,21 @@ shape = SubResource("RectangleShape2D_7mckg")
 [node name="Area2D" type="Area2D" parent="." unique_id=1407531790]
 script = ExtResource("4_7mckg")
 
-[node name="Tower" type="Sprite2D" parent="Area2D" unique_id=1508416952]
+[node name="Gnome" type="Sprite2D" parent="Area2D" unique_id=1508416952]
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("1_4cvuw")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1952658084]
 scale = Vector2(0.5, 0.5)
 shape = SubResource("CircleShape2D_j2eoc")
+
+[node name="Area2D2" type="Area2D" parent="." unique_id=571005769]
+position = Vector2(-425, -152)
+script = ExtResource("5_66br4")
+
+[node name="Flamingo" type="Sprite2D" parent="Area2D2" unique_id=1841968175]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_4cvuw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2" unique_id=1353130493]
+shape = SubResource("CircleShape2D_eort7")
