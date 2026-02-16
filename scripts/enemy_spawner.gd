@@ -3,7 +3,7 @@ extends Node
 @export var enemy_scene: PackedScene = preload("res://Enemy.tscn")
 @export var spawn_interval_min := 1.0
 @export var spawn_interval_max := 3.0
-@export var max_enemies := 10
+@export var max_enemies := 4
 
 var _timer := 0.0
 var _next_spawn_in := 0.0

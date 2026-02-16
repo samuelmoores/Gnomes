@@ -17,7 +17,7 @@ point_count = 4
 size = Vector2(57, 56.999996)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_j2eoc"]
-radius = 466.01718
+radius = 749.66925
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_eort7"]
 radius = 66.1211

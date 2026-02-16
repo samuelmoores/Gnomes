@@ -7,4 +7,4 @@ func _ready() -> void:
 
 
 func _on_body_entered(body):
-	print("attack")
+	pass

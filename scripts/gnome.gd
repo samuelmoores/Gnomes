@@ -2,7 +2,7 @@ extends Area2D
 
 @onready var attackObject = preload("res://AttackObject.tscn")
 
-@export var attack_speed_min := 2.0
+@export var attack_speed_min := 3.00
 @export var attack_speed_max := 4.0
 @export var attack_interval_min := 1.5
 @export var attack_interval_max := 2.5
@@ -44,7 +44,8 @@ func spawn_attack_for(enemy_body):
 		enemy_dir = Vector2.ZERO
 	attack_objects.append(attackObject.instantiate())
 	get_parent().add_child(attack_objects.back())
-	direction.append((enemy_body.global_position + enemy_dir * 500) - global_position)
+	direction.append((enemy_body.global_position + enemy_dir * 5) - global_position)
+	print(enemy_body.global_position)
 	attack_speeds.append(randf_range(attack_speed_min, attack_speed_max))
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
