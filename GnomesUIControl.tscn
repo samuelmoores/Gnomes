@@ -1,0 +1,118 @@
+[gd_scene load_steps=7 format=3 uid="uid://dbuf281m3upvp"]
+
+[ext_resource type="Script" path="res://GnomesUIControl.gd" id="1_dhc4p"]
+[ext_resource type="Script" path="res://Control.gd" id="1_m5ikc"]
+[ext_resource type="Script" path="res://Camera2D.gd" id="1_v3n4u"]
+[ext_resource type="Texture2D" path="res://71o0i0fTfmL._AC_UF894,1000_QL80_.jpg" id="2_je5qb"]
+[ext_resource type="Script" path="res://Control2.gd" id="3_tni8r"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_aehwv"]
+specular_color = Color(0.741176, 0, 0.776471, 1)
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_dhc4p")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+ignore_rotation = false
+position_smoothing_enabled = true
+script = ExtResource("1_v3n4u")
+
+[node name="Camera2D2" type="Camera2D" parent="."]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 4293.0
+offset_top = -2136.0
+offset_right = 4293.0
+offset_bottom = -2136.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_m5ikc")
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Control"]
+layout_mode = 0
+offset_right = 3840.0
+offset_bottom = 2160.0
+texture = ExtResource("2_je5qb")
+
+[node name="Button" type="Button" parent="CanvasLayer/Control"]
+layout_mode = 0
+offset_left = 1482.0
+offset_top = 899.0
+offset_right = 2482.0
+offset_bottom = 1199.0
+theme_override_font_sizes/font_size = 100
+
+[node name="Button2" type="Button" parent="CanvasLayer/Control"]
+layout_mode = 0
+offset_left = 1482.0
+offset_top = 1314.0
+offset_right = 2482.0
+offset_bottom = 1614.0
+theme_override_font_sizes/font_size = 100
+
+[node name="Button3" type="Button" parent="CanvasLayer/Control"]
+layout_mode = 0
+offset_left = 1482.0
+offset_top = 1745.0
+offset_right = 2482.0
+offset_bottom = 2045.0
+theme_override_font_sizes/font_size = 100
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/Control"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Panel" type="Panel" parent="CanvasLayer/Control"]
+layout_mode = 0
+offset_left = 1083.0
+offset_top = 245.0
+offset_right = 1105.0
+offset_bottom = 249.0
+scale = Vector2(80, 80)
+
+[node name="Label" type="Label" parent="CanvasLayer/Control"]
+layout_mode = 0
+offset_left = 1101.0
+offset_top = 245.0
+offset_right = 2843.0
+offset_bottom = 565.0
+theme_override_font_sizes/font_size = 200
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="."]
+
+[node name="Control2" type="Control" parent="CanvasLayer2"]
+layout_mode = 3
+anchors_preset = 0
+offset_top = 24.0
+offset_right = 3842.0
+offset_bottom = 2184.0
+script = ExtResource("3_tni8r")
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer2/Control2"]
+layout_mode = 0
+offset_right = 3840.0
+offset_bottom = 2160.0
+texture = SubResource("CanvasTexture_aehwv")
+
+[node name="Label" type="Label" parent="CanvasLayer2/Control2"]
+layout_mode = 0
+offset_left = 708.0
+offset_top = 1859.0
+offset_right = 968.0
+offset_bottom = 2064.0
+theme_override_font_sizes/font_size = 170
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="CanvasLayer/Control/Button" to="CanvasLayer/Control" method="_on_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/Button2" to="CanvasLayer/Control" method="_on_button_2_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/Button3" to="CanvasLayer/Control" method="_on_button_2_pressed"]
