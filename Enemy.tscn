@@ -1,23 +1,28 @@
 [gd_scene format=3 uid="uid://c8xk2m5nqw3hv"]
 
-[ext_resource type="Texture2D" uid="uid://cmlesdcvr7yr2" path="res://icon.svg" id="1_tex"]
-[ext_resource type="Script" path="res://scripts/enemy.gd" id="2_enemy"]
+[ext_resource type="Texture2D" uid="uid://hfqfwm6m07k0" path="res://icon.svg" id="1_tex"]
+[ext_resource type="Script" uid="uid://dec6udi7xcnm3" path="res://scripts/enemy.gd" id="2_enemy"]
+[ext_resource type="PackedScene" uid="uid://c32jkq52nphgk" path="res://Health_bar.tscn" id="3_2hac7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1"]
 size = Vector2(57, 57)
 
-[node name="Enemy" type="PathFollow2D"]
+[node name="Enemy" type="PathFollow2D" unique_id=198160575 groups=["enemy"]]
 rotates = false
 loop = false
 script = ExtResource("2_enemy")
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1041317473 groups=["enemy"]]
 modulate = Color(1, 0.14117648, 1, 1)
 
-[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D" unique_id=2054787616]
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("1_tex")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=1181759431 groups=["enemy"]]
 position = Vector2(-0.5, -0.5)
 shape = SubResource("RectangleShape2D_1")
+
+[node name="Node2D" parent="CharacterBody2D" unique_id=945672166 instance=ExtResource("3_2hac7")]
+position = Vector2(-41, -54)
+scale = Vector2(0.4, 0.4)

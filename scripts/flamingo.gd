@@ -7,4 +7,7 @@ func _ready() -> void:
 
 
 func _on_body_entered(body):
+	#play animation
+	
+	#damage enemy (body)
 	pass

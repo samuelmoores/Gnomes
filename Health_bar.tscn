@@ -1,43 +1,42 @@
-[gd_scene load_steps=2 format=3 uid="uid://c32jkq52nphgk"]
+[gd_scene format=3 uid="uid://c32jkq52nphgk"]
 
-[ext_resource type="Texture2D" path="res://plastic-pink-deep-girly-love-260nw-1254456904.jpg" id="1_2c8d5"]
+[ext_resource type="Texture2D" uid="uid://0mydtndrplmp" path="res://plastic-pink-deep-girly-love-260nw-1254456904.jpg" id="1_2c8d5"]
 
-[node name="Node2D" type="Node2D"]
+[node name="Node2D" type="Node2D" unique_id=945672166]
 
-[node name="HBoxContainer" type="HBoxContainer" parent="."]
-offset_left = 733.0
-offset_top = 1563.0
-offset_right = 2841.0
-offset_bottom = 1823.0
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1161903934]
+offset_right = 2108.0
+offset_bottom = 260.0
+scale = Vector2(0.1, 0.1)
 
-[node name="TextureRect" type="TextureRect" parent="HBoxContainer"]
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer" unique_id=593181349]
 layout_mode = 2
 texture = ExtResource("1_2c8d5")
 
-[node name="TextureRect2" type="TextureRect" parent="HBoxContainer"]
+[node name="TextureRect2" type="TextureRect" parent="HBoxContainer" unique_id=1647030401]
 layout_mode = 2
 texture = ExtResource("1_2c8d5")
 
-[node name="TextureRect3" type="TextureRect" parent="HBoxContainer"]
+[node name="TextureRect3" type="TextureRect" parent="HBoxContainer" unique_id=1960111002]
 layout_mode = 2
 texture = ExtResource("1_2c8d5")
 
-[node name="TextureRect4" type="TextureRect" parent="HBoxContainer"]
+[node name="TextureRect4" type="TextureRect" parent="HBoxContainer" unique_id=844784534]
 layout_mode = 2
 texture = ExtResource("1_2c8d5")
 
-[node name="TextureRect5" type="TextureRect" parent="HBoxContainer"]
+[node name="TextureRect5" type="TextureRect" parent="HBoxContainer" unique_id=896658499]
 layout_mode = 2
 texture = ExtResource("1_2c8d5")
 
-[node name="TextureRect6" type="TextureRect" parent="HBoxContainer"]
+[node name="TextureRect6" type="TextureRect" parent="HBoxContainer" unique_id=667600972]
 layout_mode = 2
 texture = ExtResource("1_2c8d5")
 
-[node name="TextureRect7" type="TextureRect" parent="HBoxContainer"]
+[node name="TextureRect7" type="TextureRect" parent="HBoxContainer" unique_id=1483684516]
 layout_mode = 2
 texture = ExtResource("1_2c8d5")
 
-[node name="TextureRect8" type="TextureRect" parent="HBoxContainer"]
+[node name="TextureRect8" type="TextureRect" parent="HBoxContainer" unique_id=446654623]
 layout_mode = 2
 texture = ExtResource("1_2c8d5")

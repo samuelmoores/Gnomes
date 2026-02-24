@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://dbuf281m3upvp"]
+[gd_scene format=3 uid="uid://dbuf281m3upvp"]
 
 [ext_resource type="Script" path="res://GnomesUIControl.gd" id="1_dhc4p"]
 [ext_resource type="Script" path="res://Control.gd" id="1_m5ikc"]
