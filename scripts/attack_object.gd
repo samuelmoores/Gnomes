@@ -4,10 +4,16 @@ extends RigidBody2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	contact_monitor = true
+	max_contacts_reported = 1
+	body_entered.connect(_on_body_entered)
 	gravity_scale = 0.0
 	linear_velocity = launch_velocity
 	print("launch vel: " + str(linear_velocity))
 
+func _on_body_entered(body: Node):
+	print("collided with: ", body.name)
+	queue_free()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
