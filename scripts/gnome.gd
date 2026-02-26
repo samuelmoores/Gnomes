@@ -20,7 +20,6 @@ func _ready() -> void:
 func _on_body_entered(body):
 	if not body.is_in_group("enemy"):
 		return
-	print("on body entered: " + str(body.name))
 	# Add enemy to tracking and start timer
 	enemies_in_range[body] = true
 	enemy_timers[body] = 0.0
@@ -52,7 +51,6 @@ func spawn_attack_for(enemy_body):
 	if randf() < attack_miss_chance:
 		return
 
-	print("randf() >= attack_miss_chance")
 	var path_follow = enemy_body.get_parent()
 	var enemy_dir = path_follow.get("direction")
 	if enemy_dir == null:
@@ -70,5 +68,4 @@ func spawn_attack_for(enemy_body):
 
 	# Configure rigidbody-style projectile movement # use whatever your child node is named
 	projectile.set("launch_velocity", dir * speed)
-	print(str(dir * speed))
 	get_parent().add_child(projectile)

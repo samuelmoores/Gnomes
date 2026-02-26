@@ -9,10 +9,9 @@ func _ready() -> void:
 	body_entered.connect(_on_body_entered)
 	gravity_scale = 0.0
 	linear_velocity = launch_velocity
-	print("launch vel: " + str(linear_velocity))
 
 func _on_body_entered(body: Node):
-	print("collided with: ", body.name)
+	print("attack object hit: " + str(body.name))
 	queue_free()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
