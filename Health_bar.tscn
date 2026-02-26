@@ -1,28 +1,45 @@
-[gd_scene format=3 uid="uid://c32jkq52nphgk"]
+[gd_scene load_steps=3 format=3 uid="uid://c32jkq52nphgk"]
 
-[ext_resource type="Texture2D" uid="uid://0mydtndrplmp" path="res://plastic-pink-deep-girly-love-260nw-1254456904.jpg" id="1_2c8d5"]
-[ext_resource type="Script" uid="uid://cwtg1mbcrkp6" path="res://health_bar.gd" id="1_c2oh1"]
+[ext_resource type="Script" path="res://Health_B.gd" id="1_trdll"]
+[ext_resource type="Texture2D" uid="uid://c7x1npa5bmfvc" path="res://exports/plastic-pink-deep-girly-love-260nw-1254456904.jpg" id="1_ubg0x"]
 
-[node name="Node2D" type="Node2D" unique_id=945672166]
-script = ExtResource("1_c2oh1")
+[node name="Node2D" type="Node2D"]
 
-[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1161903934]
-offset_right = 2108.0
-offset_bottom = 260.0
-scale = Vector2(0.1, 0.1)
+[node name="Health_B" type="HBoxContainer" parent="."]
+offset_left = 733.0
+offset_top = 1197.0
+offset_right = 2841.0
+offset_bottom = 1457.0
+script = ExtResource("1_trdll")
 
-[node name="TextureRect" type="TextureRect" parent="HBoxContainer" unique_id=593181349]
+[node name="TextureRect" type="TextureRect" parent="Health_B"]
 layout_mode = 2
-texture = ExtResource("1_2c8d5")
+texture = ExtResource("1_ubg0x")
 
-[node name="TextureRect2" type="TextureRect" parent="HBoxContainer" unique_id=1647030401]
+[node name="TextureRect2" type="TextureRect" parent="Health_B"]
 layout_mode = 2
-texture = ExtResource("1_2c8d5")
+texture = ExtResource("1_ubg0x")
 
-[node name="TextureRect3" type="TextureRect" parent="HBoxContainer" unique_id=1960111002]
+[node name="TextureRect3" type="TextureRect" parent="Health_B"]
 layout_mode = 2
-texture = ExtResource("1_2c8d5")
+texture = ExtResource("1_ubg0x")
 
-[node name="TextureRect4" type="TextureRect" parent="HBoxContainer" unique_id=844784534]
+[node name="TextureRect4" type="TextureRect" parent="Health_B"]
 layout_mode = 2
-texture = ExtResource("1_2c8d5")
+texture = ExtResource("1_ubg0x")
+
+[node name="TextureRect5" type="TextureRect" parent="Health_B"]
+layout_mode = 2
+texture = ExtResource("1_ubg0x")
+
+[node name="TextureRect6" type="TextureRect" parent="Health_B"]
+layout_mode = 2
+texture = ExtResource("1_ubg0x")
+
+[node name="TextureRect7" type="TextureRect" parent="Health_B"]
+layout_mode = 2
+texture = ExtResource("1_ubg0x")
+
+[node name="TextureRect8" type="TextureRect" parent="Health_B"]
+layout_mode = 2
+texture = ExtResource("1_ubg0x")

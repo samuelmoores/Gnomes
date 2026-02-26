@@ -1,0 +1,75 @@
+[gd_scene load_steps=3 format=3 uid="uid://bo5sqc7dlmm3w"]
+
+[ext_resource type="Script" path="res://MenuUI.gd" id="1_sw7q2"]
+[ext_resource type="Texture2D" uid="uid://1uli8osr2y4i" path="res://exports/71o0i0fTfmL._AC_UF894,1000_QL80_.jpg" id="2_talkm"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="MUI" type="CanvasLayer" parent="."]
+
+[node name="MenuUI" type="Control" parent="MUI"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 24.0
+offset_bottom = 24.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_sw7q2")
+
+[node name="TextureRect" type="TextureRect" parent="MUI/MenuUI"]
+layout_mode = 0
+offset_top = -24.0
+offset_right = 3840.0
+offset_bottom = 2133.0
+texture = ExtResource("2_talkm")
+
+[node name="Play" type="Button" parent="MUI/MenuUI"]
+layout_mode = 0
+offset_left = 1482.0
+offset_top = 899.0
+offset_right = 2482.0
+offset_bottom = 1199.0
+theme_override_font_sizes/font_size = 100
+
+[node name="Quit" type="Button" parent="MUI/MenuUI"]
+layout_mode = 0
+offset_left = 1482.0
+offset_top = 1314.0
+offset_right = 2482.0
+offset_bottom = 1614.0
+theme_override_font_sizes/font_size = 100
+
+[node name="Credits" type="Button" parent="MUI/MenuUI"]
+layout_mode = 0
+offset_left = 1482.0
+offset_top = 1745.0
+offset_right = 2482.0
+offset_bottom = 2045.0
+theme_override_font_sizes/font_size = 100
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MUI/MenuUI"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Panel" type="Panel" parent="MUI/MenuUI"]
+layout_mode = 0
+offset_left = 1083.0
+offset_top = 245.0
+offset_right = 1105.0
+offset_bottom = 249.0
+scale = Vector2(80, 80)
+
+[node name="Label" type="Label" parent="MUI/MenuUI"]
+layout_mode = 0
+offset_left = 1101.0
+offset_top = 245.0
+offset_right = 2843.0
+offset_bottom = 565.0
+theme_override_font_sizes/font_size = 200
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="MUI/MenuUI/Play" to="MUI/MenuUI" method="_on_play_pressed"]

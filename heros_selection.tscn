@@ -1,0 +1,36 @@
+[gd_scene load_steps=5 format=3 uid="uid://be2c68oil8gd5"]
+
+[ext_resource type="Texture2D" uid="uid://cnkbt4uxhyxfp" path="res://guibuttons/BlackButton-Active.png" id="1_26gvy"]
+[ext_resource type="Texture2D" uid="uid://bauhsv153l1pq" path="res://guibuttons/YellowButton-Active.png" id="2_7rswe"]
+[ext_resource type="Texture2D" uid="uid://dco55jxidpoyq" path="res://guibuttons/GreenButton-Active.png" id="3_kr0dp"]
+[ext_resource type="Texture2D" uid="uid://cvv0xu8qggq1q" path="res://guibuttons/RedButton-Active.png" id="4_qxfkb"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 3845.0
+offset_bottom = 2160.0
+
+[node name="Icon" type="Sprite2D" parent="CanvasLayer/Control"]
+position = Vector2(42, 39)
+scale = Vector2(0.2, 0.186)
+texture = ExtResource("1_26gvy")
+
+[node name="Icon2" type="Sprite2D" parent="CanvasLayer/Control"]
+position = Vector2(135, 40)
+scale = Vector2(0.2, 0.18)
+texture = ExtResource("2_7rswe")
+
+[node name="Icon3" type="Sprite2D" parent="CanvasLayer/Control"]
+position = Vector2(228, 40)
+scale = Vector2(0.2, 0.186)
+texture = ExtResource("3_kr0dp")
+
+[node name="Icon4" type="Sprite2D" parent="CanvasLayer/Control"]
+position = Vector2(327, 40)
+scale = Vector2(0.2, 0.186)
+texture = ExtResource("4_qxfkb")

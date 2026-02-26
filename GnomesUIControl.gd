@@ -9,3 +9,4 @@ func _physics_process(deltal: float) -> void:
 			cd22.make_current()
 		else:
 			cd2.make_current()
+	

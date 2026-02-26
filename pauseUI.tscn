@@ -1,0 +1,57 @@
+[gd_scene load_steps=3 format=3 uid="uid://budgd8413crlq"]
+
+[ext_resource type="Script" path="res://PauseGame.gd" id="1_x0fpd"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_jdi0u"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="PauseGame" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 3840.0
+offset_bottom = 2157.0
+script = ExtResource("1_x0fpd")
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/PauseGame"]
+modulate = Color(0.196078, 0.196078, 0.196078, 0.415686)
+layout_mode = 0
+offset_right = 3840.0
+offset_bottom = 2157.0
+texture = SubResource("CanvasTexture_jdi0u")
+
+[node name="resume" type="Button" parent="CanvasLayer/PauseGame"]
+layout_mode = 0
+offset_left = 1482.0
+offset_top = 899.0
+offset_right = 2482.0
+offset_bottom = 1199.0
+theme_override_font_sizes/font_size = 200
+
+[node name="quit" type="Button" parent="CanvasLayer/PauseGame"]
+layout_mode = 0
+offset_left = 1482.0
+offset_top = 1314.0
+offset_right = 2482.0
+offset_bottom = 1614.0
+theme_override_font_sizes/font_size = 200
+
+[node name="Label" type="Label" parent="CanvasLayer/PauseGame"]
+layout_mode = 0
+offset_left = 1101.0
+offset_top = 245.0
+offset_right = 2843.0
+offset_bottom = 565.0
+theme_override_font_sizes/font_size = 200
+
+[node name="backgroundShade" type="Panel" parent="CanvasLayer/PauseGame"]
+layout_mode = 0
+offset_left = 1101.0
+offset_top = 245.0
+offset_right = 2833.0
+offset_bottom = 565.0
+
+[connection signal="pressed" from="CanvasLayer/PauseGame/resume" to="CanvasLayer/PauseGame" method="_on_resume_pressed"]
+[connection signal="pressed" from="CanvasLayer/PauseGame/quit" to="CanvasLayer/PauseGame" method="_on_quit_pressed"]
