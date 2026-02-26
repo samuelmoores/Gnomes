@@ -1,6 +1,7 @@
 extends CharacterBody2D
 
 @export var health := 1.0
+@onready var health_bar = $Node2D
 
 func take_damage() -> void:
 	# Attack object must be in "attack" group
@@ -9,3 +10,5 @@ func take_damage() -> void:
 	print("post take damage: " + str(health))
 	if health <= 0:
 		queue_free()
+	else:
+		health_bar.Decrease()

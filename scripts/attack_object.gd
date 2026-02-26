@@ -10,8 +10,9 @@ func _ready() -> void:
 	gravity_scale = 0.0
 	linear_velocity = launch_velocity
 
-func _on_body_entered(body: Node):
+func _on_body_entered(body: CharacterBody2D):
 	print(body.name)
+	
 	body.take_damage()
 	queue_free()
 
