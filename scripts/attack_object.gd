@@ -11,7 +11,8 @@ func _ready() -> void:
 	linear_velocity = launch_velocity
 
 func _on_body_entered(body: Node):
-	print("attack object hit: " + str(body.name))
+	print(body.name)
+	body.take_damage()
 	queue_free()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

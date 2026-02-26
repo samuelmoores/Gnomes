@@ -8,9 +8,6 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1"]
 size = Vector2(57, 57)
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_2hac7"]
-radius = 28.0
-
 [node name="Enemy" type="PathFollow2D" unique_id=198160575 groups=["enemy"]]
 rotates = false
 loop = false
@@ -18,6 +15,7 @@ script = ExtResource("2_enemy")
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1041317473 groups=["enemy"]]
 modulate = Color(1, 0.14117648, 1, 1)
+script = ExtResource("4_e6d4v")
 
 [node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D" unique_id=2054787616]
 scale = Vector2(0.5, 0.5)
@@ -30,9 +28,3 @@ shape = SubResource("RectangleShape2D_1")
 [node name="Node2D" parent="CharacterBody2D" unique_id=945672166 instance=ExtResource("3_2hac7")]
 position = Vector2(-41, -54)
 scale = Vector2(0.4, 0.4)
-
-[node name="Area2D" type="Area2D" parent="CharacterBody2D" unique_id=993473271]
-script = ExtResource("4_e6d4v")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D/Area2D" unique_id=216559098]
-shape = SubResource("CircleShape2D_2hac7")
