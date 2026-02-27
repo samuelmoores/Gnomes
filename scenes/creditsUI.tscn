@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bvtg8t063tr0"]
 
-[ext_resource type="Script" path="res://CreditUI.gd" id="1_wt5r2"]
+[ext_resource type="Script" uid="uid://cmmv1hy2fqq58" path="res://scripts/ui/CreditUI.gd" id="1_wt5r2"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_3rfbu"]
 

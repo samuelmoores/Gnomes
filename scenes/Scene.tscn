@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://e8285gx76yeb"]
 
-[ext_resource type="Texture2D" uid="uid://hfqfwm6m07k0" path="res://icon.svg" id="1_4cvuw"]
+[ext_resource type="Texture2D" uid="uid://hfqfwm6m07k0" path="res://art/icon.svg" id="1_4cvuw"]
 [ext_resource type="Script" uid="uid://0eg0fvxnhy0m" path="res://scripts/game.gd" id="1_7mckg"]
 [ext_resource type="Script" uid="uid://d30dg1dlwyof2" path="res://scripts/enemy_spawner.gd" id="2_eort7"]
 [ext_resource type="Script" uid="uid://bgnu3oy6oxfbw" path="res://scripts/gnome.gd" id="4_7mckg"]
-[ext_resource type="Texture2D" uid="uid://dn2jv4yp4wbik" path="res://Screenshot_2026-02-26_140425-removebg-preview.png" id="4_eort7"]
+[ext_resource type="Texture2D" uid="uid://dn2jv4yp4wbik" path="res://art/Screenshot_2026-02-26_140425-removebg-preview.png" id="4_eort7"]
 [ext_resource type="Script" uid="uid://ulffx6dvpimf" path="res://scripts/flamingo.gd" id="5_66br4"]
 
 [sub_resource type="Curve2D" id="Curve2D_7mckg"]

@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://c32jkq52nphgk"]
 
-[ext_resource type="Texture2D" uid="uid://batn1o4tt0yac" path="res://plastic-pink-deep-girly-love-260nw-1254456904.jpg" id="1_2c8d5"]
+[ext_resource type="Texture2D" uid="uid://batn1o4tt0yac" path="res://art/plastic-pink-deep-girly-love-260nw-1254456904.jpg" id="1_2c8d5"]
 [ext_resource type="Script" uid="uid://dpmnb6vjssasv" path="res://scripts/health_bar.gd" id="1_c2oh1"]
 
 [node name="Node2D" type="Node2D" unique_id=945672166]
