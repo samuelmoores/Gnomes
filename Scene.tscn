@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://e8285gx76yeb"]
 
-[ext_resource type="Texture2D" uid="uid://cmlesdcvr7yr2" path="res://icon.svg" id="1_4cvuw"]
+[ext_resource type="Texture2D" uid="uid://hfqfwm6m07k0" path="res://icon.svg" id="1_4cvuw"]
 [ext_resource type="Script" uid="uid://0eg0fvxnhy0m" path="res://scripts/game.gd" id="1_7mckg"]
-[ext_resource type="Script" uid="uid://dec6udi7xcnm3" path="res://scripts/enemy.gd" id="1_j2eoc"]
 [ext_resource type="Script" uid="uid://d30dg1dlwyof2" path="res://scripts/enemy_spawner.gd" id="2_eort7"]
 [ext_resource type="Script" uid="uid://bgnu3oy6oxfbw" path="res://scripts/gnome.gd" id="4_7mckg"]
+[ext_resource type="Texture2D" uid="uid://dn2jv4yp4wbik" path="res://Screenshot_2026-02-26_140425-removebg-preview.png" id="4_eort7"]
 [ext_resource type="Script" uid="uid://ulffx6dvpimf" path="res://scripts/flamingo.gd" id="5_66br4"]
 
 [sub_resource type="Curve2D" id="Curve2D_7mckg"]
@@ -12,9 +12,6 @@ _data = {
 "points": PackedVector2Array(0, 0, 0, 0, -635, -96, 0, 0, 0, 0, -207, -83, 0, 0, 0, 0, -204, 176, 0, 0, 0, 0, 672, 188)
 }
 point_count = 4
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_7mckg"]
-size = Vector2(57, 56.999996)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_j2eoc"]
 radius = 749.66925
@@ -64,32 +61,13 @@ curve = SubResource("Curve2D_7mckg")
 [node name="Node" type="Node" parent="Path2D" unique_id=1713786854]
 script = ExtResource("2_eort7")
 
-[node name="PathFollow2D" type="PathFollow2D" parent="Path2D" unique_id=1050345441]
-position = Vector2(-635, -96)
-rotation = 0.030364497
-rotates = false
-loop = false
-script = ExtResource("1_j2eoc")
-
-[node name="Enemy" type="CharacterBody2D" parent="Path2D/PathFollow2D" unique_id=1429324363]
-modulate = Color(1, 0.14117648, 1, 1)
-position = Vector2(12.75116, -8.390984)
-rotation = -0.030364497
-
-[node name="Sprite2D" type="Sprite2D" parent="Path2D/PathFollow2D/Enemy" unique_id=89219674]
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("1_4cvuw")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Path2D/PathFollow2D/Enemy" unique_id=1983423159]
-position = Vector2(-0.5, -0.5000076)
-shape = SubResource("RectangleShape2D_7mckg")
-
 [node name="Area2D" type="Area2D" parent="." unique_id=1407531790]
 script = ExtResource("4_7mckg")
 
 [node name="Gnome" type="Sprite2D" parent="Area2D" unique_id=1508416952]
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("1_4cvuw")
+position = Vector2(28.06, 18.255)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("4_eort7")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1952658084]
 scale = Vector2(0.5, 0.5)

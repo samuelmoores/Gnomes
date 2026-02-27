@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://be2c68oil8gd5"]
+[gd_scene format=3 uid="uid://be2c68oil8gd5"]
 
 [ext_resource type="Texture2D" uid="uid://cnkbt4uxhyxfp" path="res://guibuttons/BlackButton-Active.png" id="1_26gvy"]
 [ext_resource type="Texture2D" uid="uid://bauhsv153l1pq" path="res://guibuttons/YellowButton-Active.png" id="2_7rswe"]

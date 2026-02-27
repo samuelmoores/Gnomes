@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://budgd8413crlq"]
+[gd_scene format=3 uid="uid://budgd8413crlq"]
 
 [ext_resource type="Script" path="res://PauseGame.gd" id="1_x0fpd"]
 

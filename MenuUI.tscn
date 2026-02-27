@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://bo5sqc7dlmm3w"]
+[gd_scene format=3 uid="uid://bo5sqc7dlmm3w"]
 
 [ext_resource type="Script" path="res://MenuUI.gd" id="1_sw7q2"]
 [ext_resource type="Texture2D" uid="uid://1uli8osr2y4i" path="res://exports/71o0i0fTfmL._AC_UF894,1000_QL80_.jpg" id="2_talkm"]
