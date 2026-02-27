@@ -23,10 +23,10 @@ radius = 66.1211
 script = ExtResource("1_7mckg")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1773464010]
-offset_left = -603.0
-offset_top = -337.0
-offset_right = -563.0
-offset_bottom = -297.0
+offset_left = -1930.0
+offset_top = -1120.0
+offset_right = -1800.5062
+offset_bottom = -987.53
 scale = Vector2(30.271732, 17.000078)
 color = Color(0.5729883, 0.5729883, 0.5729883, 1)
 
