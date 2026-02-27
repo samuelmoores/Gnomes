@@ -26,5 +26,5 @@ position = Vector2(-0.5, -0.5)
 shape = SubResource("RectangleShape2D_1")
 
 [node name="Node2D" parent="CharacterBody2D" unique_id=945672166 instance=ExtResource("4_iwav8")]
-position = Vector2(-41, -54)
+position = Vector2(-21.000002, -51)
 scale = Vector2(0.4, 0.4)
