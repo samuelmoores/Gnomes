@@ -15,7 +15,3 @@ func _on_body_entered(body: CharacterBody2D):
 	
 	body.take_damage()
 	queue_free()
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass

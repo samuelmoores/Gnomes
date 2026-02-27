@@ -5,10 +5,9 @@ extends CharacterBody2D
 
 func take_damage() -> void:
 	# Attack object must be in "attack" group
-	print("pre take damage: " + str(health))
 	health -= 0.25
-	print("post take damage: " + str(health))
 	if health <= 0:
+		GameManager.AddCurrency(10)
 		queue_free()
 	else:
 		health_bar.Decrease()

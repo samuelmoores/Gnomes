@@ -6,6 +6,7 @@
 [ext_resource type="Script" uid="uid://bgnu3oy6oxfbw" path="res://scripts/gnome.gd" id="4_7mckg"]
 [ext_resource type="Texture2D" uid="uid://dn2jv4yp4wbik" path="res://art/Screenshot_2026-02-26_140425-removebg-preview.png" id="4_eort7"]
 [ext_resource type="Script" uid="uid://ulffx6dvpimf" path="res://scripts/flamingo.gd" id="5_66br4"]
+[ext_resource type="PackedScene" uid="uid://kymlmbj1wyts" path="res://scenes/GameManager.tscn" id="7_5kwoq"]
 
 [sub_resource type="Curve2D" id="Curve2D_7mckg"]
 _data = {
@@ -22,7 +23,7 @@ radius = 66.1211
 [node name="Node2D" type="Node2D" unique_id=2096707777]
 script = ExtResource("1_7mckg")
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=1773464010]
+[node name="BG" type="ColorRect" parent="." unique_id=1773464010]
 offset_left = -1930.0
 offset_top = -1120.0
 offset_right = -1800.5062
@@ -30,14 +31,14 @@ offset_bottom = -987.53
 scale = Vector2(30.271732, 17.000078)
 color = Color(0.5729883, 0.5729883, 0.5729883, 1)
 
-[node name="ColorRect2" type="ColorRect" parent="." unique_id=1485858353]
+[node name="Path" type="ColorRect" parent="." unique_id=1485858353]
 offset_left = -226.0
 offset_top = -111.000015
 offset_right = -186.0
 offset_bottom = -71.000015
 scale = Vector2(1, 7.679999)
 
-[node name="ColorRect3" type="ColorRect" parent="." unique_id=265593940]
+[node name="Path2" type="ColorRect" parent="." unique_id=265593940]
 offset_left = -530.0
 offset_top = -76.0
 offset_right = -490.0
@@ -45,7 +46,7 @@ offset_bottom = -36.0
 rotation = -1.5420468
 scale = Vector2(1, 7.679999)
 
-[node name="ColorRect4" type="ColorRect" parent="." unique_id=515963173]
+[node name="Path3" type="ColorRect" parent="." unique_id=515963173]
 offset_left = -189.00003
 offset_top = 195.0
 offset_right = -149.00003
@@ -83,3 +84,6 @@ texture = ExtResource("1_4cvuw")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2" unique_id=1353130493]
 shape = SubResource("CircleShape2D_eort7")
+
+[node name="GameManager" parent="." unique_id=942609086 instance=ExtResource("7_5kwoq")]
+position = Vector2(-1468, -471)

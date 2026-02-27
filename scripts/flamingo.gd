@@ -8,6 +8,6 @@ func _ready() -> void:
 
 func _on_body_entered(body):
 	#play animation
-	
+	print("Flamingo Attack" + str(body))
 	#damage enemy (body)
 	pass
