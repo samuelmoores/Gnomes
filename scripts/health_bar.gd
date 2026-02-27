@@ -6,4 +6,3 @@ func Decrease() -> void:
 	if(array.size() > 0):
 		array.back().visible = false
 		array.pop_back()
-		print(str(array.size()))

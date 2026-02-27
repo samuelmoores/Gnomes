@@ -56,7 +56,6 @@ func spawn_attack_for(enemy_body):
 	if enemy_dir == null:
 		enemy_dir = Vector2.ZERO
 
-	print(str(enemy_dir))
 	var projectile = attackObject.instantiate()
 
 	# Start projectile at the gnome's position
