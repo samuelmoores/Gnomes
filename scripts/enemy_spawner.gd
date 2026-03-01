@@ -9,13 +9,9 @@ var _timer := 0.0
 var _next_spawn_in := 0.0
 
 
-func _ready() -> void:
-	_next_spawn_in = randf_range(spawn_interval_min, spawn_interval_max)
-
-
 func _process(delta: float) -> void:
 	_timer += delta
-	if _timer >= _next_spawn_in:
+	if _timer >= _next_spawn_in and GameManager.RoundGoing():
 		_timer = 0.0
 		_next_spawn_in = randf_range(spawn_interval_min, spawn_interval_max)
 		spawn_enemy()

@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://ctreb214cypco"]
+
+[ext_resource type="Script" uid="uid://c0patrrasnaov" path="res://scripts/gnome_panel.gd" id="1_cfglp"]
+[ext_resource type="Texture2D" uid="uid://dn2jv4yp4wbik" path="res://art/Screenshot_2026-02-26_140425-removebg-preview.png" id="2_v4wk1"]
+
+[node name="Panel" type="Panel" unique_id=386781174]
+custom_minimum_size = Vector2(80, 80)
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_cfglp")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1124739805]
+position = Vector2(41.00003, 42.000004)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("2_v4wk1")
+
+[connection signal="gui_input" from="." to="." method="_on_gui_input"]

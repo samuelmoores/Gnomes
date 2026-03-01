@@ -21,32 +21,32 @@ script = ExtResource("1_najbj")
 [node name="TextureRect" type="TextureRect" parent="MUI/MenuUI" unique_id=368936623]
 layout_mode = 0
 offset_top = -24.0
-offset_right = 3840.0
-offset_bottom = 2133.0
+offset_right = 1272.0
+offset_bottom = 871.0
 texture = ExtResource("2_1skp7")
 
 [node name="Play" type="Button" parent="MUI/MenuUI" unique_id=589145835]
 layout_mode = 0
-offset_left = 1482.0
-offset_top = 899.0
-offset_right = 2482.0
-offset_bottom = 1199.0
+offset_left = 440.0
+offset_top = 240.0
+offset_right = 766.0
+offset_bottom = 301.0
 theme_override_font_sizes/font_size = 100
 
 [node name="Quit" type="Button" parent="MUI/MenuUI" unique_id=685050257]
 layout_mode = 0
-offset_left = 1482.0
-offset_top = 1314.0
-offset_right = 2482.0
-offset_bottom = 1614.0
+offset_left = 320.0
+offset_top = 344.0
+offset_right = 784.0
+offset_bottom = 440.0
 theme_override_font_sizes/font_size = 100
 
 [node name="Credits" type="Button" parent="MUI/MenuUI" unique_id=2049783285]
 layout_mode = 0
-offset_left = 1482.0
-offset_top = 1745.0
-offset_right = 2482.0
-offset_bottom = 2045.0
+offset_left = 344.0
+offset_top = 544.0
+offset_right = 808.0
+offset_bottom = 616.0
 theme_override_font_sizes/font_size = 100
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MUI/MenuUI" unique_id=976931847]

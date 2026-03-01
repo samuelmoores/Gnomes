@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://dmydk21vaadmi"]
+
+[ext_resource type="PackedScene" uid="uid://ctreb214cypco" path="res://scenes/gnome_panel.tscn" id="1_nt7q6"]
+[ext_resource type="Script" uid="uid://c8fsi6y0gr1bq" path="res://scripts/start_round_button.gd" id="3_gdt2y"]
+
+[node name="UI" type="CanvasLayer" unique_id=996845106]
+
+[node name="Panel" type="Panel" parent="." unique_id=1997080281]
+offset_left = 970.0
+offset_top = 38.0
+offset_right = 1222.0
+offset_bottom = 169.0
+
+[node name="FlowContainer" type="FlowContainer" parent="Panel" unique_id=1395182139]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 12.0
+offset_right = 245.0
+offset_bottom = 119.0
+
+[node name="Panel" parent="Panel" unique_id=386781174 instance=ExtResource("1_nt7q6")]
+layout_mode = 0
+offset_left = 21.0
+offset_top = 21.0
+offset_right = 101.0
+offset_bottom = 101.0
+
+[node name="Button" type="Button" parent="." unique_id=319192352]
+offset_left = 1028.0
+offset_top = 187.0
+offset_right = 1129.0
+offset_bottom = 259.0
+scale = Vector2(1.2399999, 1)
+text = "Start Round"
+vertical_icon_alignment = 0
+script = ExtResource("3_gdt2y")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]

@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://cyxd6laqbvcio"]
+
+[ext_resource type="Script" uid="uid://ulffx6dvpimf" path="res://scripts/flamingo.gd" id="1_22yti"]
+[ext_resource type="Texture2D" uid="uid://hfqfwm6m07k0" path="res://art/icon.svg" id="2_l0kl8"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_eort7"]
+radius = 66.1211
+
+[node name="Area2D2" type="Area2D" unique_id=493116956]
+script = ExtResource("1_22yti")
+
+[node name="Flamingo" type="Sprite2D" parent="." unique_id=925332468]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_l0kl8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=708407293]
+shape = SubResource("CircleShape2D_eort7")
