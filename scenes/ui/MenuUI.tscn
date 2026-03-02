@@ -1,7 +1,12 @@
 [gd_scene format=3 uid="uid://bo5sqc7dlmm3w"]
 
+[ext_resource type="Texture2D" uid="uid://dyr7dcw6wdncb" path="res://art/painting-textured-walls.jpg" id="1_76pd4"]
 [ext_resource type="Script" uid="uid://cg761rnhgw6qo" path="res://scripts/ui/MenuUI.gd" id="1_najbj"]
 [ext_resource type="Texture2D" uid="uid://1uli8osr2y4i" path="res://exports/71o0i0fTfmL._AC_UF894,1000_QL80_.jpg" id="2_1skp7"]
+[ext_resource type="AudioStream" uid="uid://b5sngi10fe5g0" path="res://audio/Music/David Guetta ft. Sia  Titanium  Epic Emotional Orchestral Cover 2026 (Cinematic Power).mp3" id="3_hndkf"]
+[ext_resource type="Texture2D" uid="uid://c6j0s2565ojjj" path="res://art/picture_frame.png" id="4_i7wti"]
+[ext_resource type="AudioStream" uid="uid://sbs4bma7pex7" path="res://audio/SFX/Click_Standard_00.mp3" id="6_i7wti"]
+[ext_resource type="AudioStream" uid="uid://bfoh55kp26f44" path="res://audio/SFX/Click_Standard_01.mp3" id="7_4yr37"]
 
 [node name="Node2D" type="Node2D" unique_id=2060771162]
 
@@ -12,41 +17,54 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = 24.0
-offset_bottom = 24.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_najbj")
 
+[node name="ColorRect" type="ColorRect" parent="MUI/MenuUI" unique_id=1091329001]
+layout_mode = 0
+offset_left = 178.0
+offset_top = 156.0
+offset_right = 453.0
+offset_bottom = 499.0
+color = Color(0, 0, 0, 1)
+
 [node name="TextureRect" type="TextureRect" parent="MUI/MenuUI" unique_id=368936623]
 layout_mode = 0
-offset_top = -24.0
-offset_right = 1272.0
-offset_bottom = 871.0
+offset_left = 191.0
+offset_top = 244.0
+offset_right = 1471.0
+offset_bottom = 1139.0
+scale = Vector2(0.2, 0.2)
 texture = ExtResource("2_1skp7")
+
+[node name="PictureFrame" type="Sprite2D" parent="MUI/MenuUI" unique_id=423257306]
+position = Vector2(315.99994, 330.49997)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("4_i7wti")
 
 [node name="Play" type="Button" parent="MUI/MenuUI" unique_id=589145835]
 layout_mode = 0
-offset_left = 440.0
-offset_top = 240.0
-offset_right = 766.0
-offset_bottom = 301.0
+offset_left = 753.0
+offset_top = 132.0
+offset_right = 1079.0
+offset_bottom = 193.0
 theme_override_font_sizes/font_size = 100
 
 [node name="Quit" type="Button" parent="MUI/MenuUI" unique_id=685050257]
 layout_mode = 0
-offset_left = 320.0
-offset_top = 344.0
-offset_right = 784.0
-offset_bottom = 440.0
+offset_left = 789.0
+offset_top = 522.0
+offset_right = 1089.0
+offset_bottom = 582.0
 theme_override_font_sizes/font_size = 100
 
 [node name="Credits" type="Button" parent="MUI/MenuUI" unique_id=2049783285]
 layout_mode = 0
-offset_left = 344.0
-offset_top = 544.0
-offset_right = 808.0
-offset_bottom = 616.0
+offset_left = 692.0
+offset_top = 300.0
+offset_right = 1156.0
+offset_bottom = 372.0
 theme_override_font_sizes/font_size = 100
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MUI/MenuUI" unique_id=976931847]
@@ -54,22 +72,35 @@ layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="Panel" type="Panel" parent="MUI/MenuUI" unique_id=1028453835]
+[node name="Label" type="Label" parent="MUI/MenuUI" unique_id=165683269]
 layout_mode = 0
-offset_left = 1083.0
-offset_top = 245.0
-offset_right = 1105.0
-offset_bottom = 249.0
-scale = Vector2(80, 80)
+offset_left = 647.0
+offset_top = 127.0
+offset_right = 687.0
+offset_bottom = 150.0
 
-[node name="Label" type="Label" parent="MUI/MenuUI" unique_id=2052460942]
-layout_mode = 0
-offset_left = 1101.0
-offset_top = 245.0
-offset_right = 2843.0
-offset_bottom = 565.0
-theme_override_font_sizes/font_size = 200
-horizontal_alignment = 1
-vertical_alignment = 1
+[node name="PaintingTexturedWalls" type="Sprite2D" parent="." unique_id=1076730221]
+position = Vector2(645, 369)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("1_76pd4")
 
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1668351168]
+stream = ExtResource("3_hndkf")
+autoplay = true
+bus = &"Music"
+
+[node name="AudioStreamPlayerHover" type="AudioStreamPlayer2D" parent="." unique_id=1749397997]
+position = Vector2(753, 132)
+stream = ExtResource("6_i7wti")
+
+[node name="AudioStreamPlayerClick" type="AudioStreamPlayer2D" parent="." unique_id=1976376066]
+position = Vector2(692, 300)
+stream = ExtResource("7_4yr37")
+
+[connection signal="button_down" from="MUI/MenuUI/Play" to="MUI/MenuUI" method="_on_play_button_down"]
+[connection signal="mouse_entered" from="MUI/MenuUI/Play" to="MUI/MenuUI" method="_on_play_mouse_entered"]
 [connection signal="pressed" from="MUI/MenuUI/Play" to="MUI/MenuUI" method="_on_play_pressed"]
+[connection signal="button_down" from="MUI/MenuUI/Quit" to="MUI/MenuUI" method="_on_quit_button_down"]
+[connection signal="mouse_entered" from="MUI/MenuUI/Quit" to="MUI/MenuUI" method="_on_quit_mouse_entered"]
+[connection signal="button_down" from="MUI/MenuUI/Credits" to="MUI/MenuUI" method="_on_credits_button_down"]
+[connection signal="mouse_entered" from="MUI/MenuUI/Credits" to="MUI/MenuUI" method="_on_credits_mouse_entered"]

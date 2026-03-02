@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://0eg0fvxnhy0m" path="res://scripts/game.gd" id="1_7mckg"]
 [ext_resource type="Script" uid="uid://d30dg1dlwyof2" path="res://scripts/enemy_spawner.gd" id="2_eort7"]
 [ext_resource type="PackedScene" uid="uid://kymlmbj1wyts" path="res://scenes/GameManager.tscn" id="7_5kwoq"]
-[ext_resource type="Texture2D" uid="uid://b1rbr7nwedw2h" path="res://grassland_tiles.png" id="8_2sv30"]
+[ext_resource type="Texture2D" uid="uid://b1rbr7nwedw2h" path="res://art/grassland_tiles.png" id="8_2sv30"]
 [ext_resource type="PackedScene" uid="uid://dmydk21vaadmi" path="res://scenes/ui.tscn" id="9_dod7h"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2sv30"]

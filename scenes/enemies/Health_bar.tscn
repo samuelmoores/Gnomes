@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://c32jkq52nphgk"]
+
+[ext_resource type="Texture2D" uid="uid://batn1o4tt0yac" path="res://art/plastic-pink-deep-girly-love-260nw-1254456904.jpg" id="1_2c8d5"]
+[ext_resource type="Script" uid="uid://dpmnb6vjssasv" path="res://scripts/health_bar.gd" id="1_c2oh1"]
+
+[node name="Node2D" type="Node2D" unique_id=945672166]
+script = ExtResource("1_c2oh1")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1161903934]
+offset_right = 2108.0
+offset_bottom = 260.0
+scale = Vector2(0.1, 0.1)
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer" unique_id=593181349]
+layout_mode = 2
+texture = ExtResource("1_2c8d5")
+
+[node name="TextureRect2" type="TextureRect" parent="HBoxContainer" unique_id=1647030401]
+layout_mode = 2
+texture = ExtResource("1_2c8d5")
+
+[node name="TextureRect3" type="TextureRect" parent="HBoxContainer" unique_id=1960111002]
+layout_mode = 2
+texture = ExtResource("1_2c8d5")
+
+[node name="TextureRect4" type="TextureRect" parent="HBoxContainer" unique_id=844784534]
+layout_mode = 2
+texture = ExtResource("1_2c8d5")

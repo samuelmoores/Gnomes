@@ -1,6 +1,6 @@
 extends Area2D
 
-@onready var attackObject = preload("res://scenes/AttackObject.tscn")
+@onready var attackObject = preload("res://scenes/towers/AttackObject.tscn")
 
 @export var attack_speed_min := 500.0
 @export var attack_speed_max := 600.0
