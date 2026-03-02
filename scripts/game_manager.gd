@@ -1,6 +1,6 @@
 extends Node2D
 
-var currency := 0
+var currency := 100
 var start_round = false
 
 func StartRound() -> void:
@@ -11,3 +11,6 @@ func RoundGoing() -> bool:
 
 func AddCurrency(amount: int) -> void:
 	print("add currency: " + str(amount))
+	
+func SpendCurrency(amount: int) -> void:
+	currency -= amount

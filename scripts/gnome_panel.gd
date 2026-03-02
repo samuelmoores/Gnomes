@@ -15,6 +15,7 @@ func _on_gui_input(event: InputEvent) -> void:
 		add_child(newTower)
 		newTower.global_position = event.global_position
 		audio_stream_player_2d_2.play()
+		GameManager.SpendCurrency(100)
 	elif event is InputEventMouseMotion and event.button_mask == 1:
 		get_child(1).global_position = event.global_position
 	if event is InputEventMouseButton and event.button_mask == 0:
