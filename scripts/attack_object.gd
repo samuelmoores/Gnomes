@@ -12,5 +12,6 @@ func _ready() -> void:
 
 func _on_body_entered(body: Node2D):
 	
-	body.take_damage()
-	queue_free()
+	if body is CharacterBody2D:
+		body.take_damage()
+		queue_free()
