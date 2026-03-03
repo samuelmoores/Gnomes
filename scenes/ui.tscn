@@ -7,6 +7,7 @@
 [ext_resource type="Script" uid="uid://b0ajopbx4g6ym" path="res://scenes/label_currency.gd" id="5_wm3ai"]
 [ext_resource type="Script" uid="uid://b26rhicjxut14" path="res://scripts/ui/label_currency_gained_value.gd" id="6_8dubc"]
 [ext_resource type="Script" uid="uid://q850nof6biay" path="res://scripts/ui/panel_round_over.gd" id="6_p7vwb"]
+[ext_resource type="Script" uid="uid://bsbxuycvit436" path="res://scenes/label_gardern_health_value.gd" id="8_ktti3"]
 
 [node name="UI" type="CanvasLayer" unique_id=996845106]
 
@@ -73,15 +74,15 @@ text = "Currencey:"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Panel" type="Panel" parent="." unique_id=615507922]
+[node name="Panel_RoundOver" type="Panel" parent="." unique_id=615507922]
 visible = false
-offset_left = 446.0
-offset_top = 212.0
-offset_right = 730.0
-offset_bottom = 373.0
+offset_left = 950.0
+offset_top = 388.0
+offset_right = 1234.0
+offset_bottom = 549.0
 script = ExtResource("6_p7vwb")
 
-[node name="Label_round_over" type="Label" parent="Panel" unique_id=915737477]
+[node name="Label_round_over" type="Label" parent="Panel_RoundOver" unique_id=915737477]
 layout_mode = 0
 offset_left = 58.0
 offset_top = 11.0
@@ -90,7 +91,7 @@ offset_bottom = 40.0
 text = "Round Over"
 horizontal_alignment = 1
 
-[node name="Label_currency_gained" type="Label" parent="Panel" unique_id=1692569738]
+[node name="Label_currency_gained" type="Label" parent="Panel_RoundOver" unique_id=1692569738]
 layout_mode = 0
 offset_left = 11.0
 offset_top = 55.0
@@ -99,7 +100,7 @@ offset_bottom = 84.0
 text = "Currency Earned:"
 horizontal_alignment = 1
 
-[node name="Label_currency_gained_value" type="Label" parent="Panel" unique_id=1927394420]
+[node name="Label_currency_gained_value" type="Label" parent="Panel_RoundOver" unique_id=1927394420]
 layout_mode = 0
 offset_left = 157.0
 offset_top = 54.0
@@ -107,7 +108,7 @@ offset_right = 267.0
 offset_bottom = 83.0
 script = ExtResource("6_8dubc")
 
-[node name="Button" type="Button" parent="Panel" unique_id=1818665320]
+[node name="Button" type="Button" parent="Panel_RoundOver" unique_id=1818665320]
 layout_mode = 0
 offset_left = 98.0
 offset_top = 108.0
@@ -115,6 +116,29 @@ offset_right = 163.0
 offset_bottom = 129.0
 text = "Next Round"
 
+[node name="Panel_GardenHealth" type="Panel" parent="." unique_id=683503095]
+offset_left = 42.0
+offset_top = 21.0
+offset_right = 278.0
+offset_bottom = 75.0
+
+[node name="Label_GardernHealth_value" type="Label" parent="Panel_GardenHealth" unique_id=1745500174]
+layout_mode = 0
+offset_left = 136.0
+offset_top = 17.0
+offset_right = 165.0
+offset_bottom = 40.0
+text = "100"
+script = ExtResource("8_ktti3")
+
+[node name="Label_GardernHealth" type="Label" parent="Panel_GardenHealth" unique_id=550483457]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 16.0
+offset_right = 203.0
+offset_bottom = 39.0
+text = "Garden Health:         /100"
+
 [connection signal="mouse_entered" from="Button" to="Button" method="_on_mouse_entered"]
 [connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
-[connection signal="button_down" from="Panel/Button" to="Panel" method="_on_button_button_down"]
+[connection signal="button_down" from="Panel_RoundOver/Button" to="Panel_RoundOver" method="_on_button_button_down"]

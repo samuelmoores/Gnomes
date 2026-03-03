@@ -1,6 +1,7 @@
 extends Area2D
 
 @onready var attackObject = preload("res://scenes/towers/AttackObject.tscn")
+@onready var sprite_2d: Sprite2D = $Sprite2D
 
 @export var attack_speed_min := 500.0
 @export var attack_speed_max := 600.0
@@ -69,3 +70,7 @@ func spawn_attack_for(enemy_body):
 	# Configure rigidbody-style projectile movement # use whatever your child node is named
 	projectile.set("launch_velocity", dir * speed)
 	get_parent().add_child(projectile)
+	
+func RemoveColissionSprite() -> void:
+	sprite_2d.visible = false
+	

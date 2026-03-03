@@ -9,6 +9,7 @@ var enemys_to_kill = 4
 var enemies_killed = 0
 var gnomes = []
 signal new_round
+var garden_health = 100
 
 func StartRound() -> void:
 	start_round = true
@@ -18,7 +19,6 @@ func EndRound() -> void:
 	
 func EnemyKilled() -> void:
 	enemies_killed += 1
-	print("enemykilled() enemies to kill: " + str(enemys_to_kill))
 	if(enemies_killed == enemys_to_kill):
 		EndRound()
 	
@@ -28,10 +28,18 @@ func RoundGoing() -> bool:
 func AddCurrency(amount: int) -> void:
 	currency_earned += amount
 	
-func SpendCurrency(amount: int) -> void:
-	currency_total -= amount
+func SpendCurrency(amount: int) -> bool:
+	if(currency_total >= amount):
+		currency_total -= amount
+		return true
+	else:
+		return false
 	
 func NewRound() -> void:
+	if(currency_total <= 0):
+		print("you loose")
+		return
+	
 	new_round.emit()
 	currency_total += currency_earned
 	currency_earned = 0
@@ -45,4 +53,7 @@ func NewRound() -> void:
 	
 func AddGnome(new_gnome: Node2D) -> void:
 	gnomes.append(new_gnome)
+	
+func DamageGarden() -> void:
+	garden_health -= 10
 	

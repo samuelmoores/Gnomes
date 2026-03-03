@@ -20,18 +20,21 @@ func _on_gui_input(event: InputEvent) -> void:
 
 	# process new gnome
 	if event is InputEventMouseButton and event.button_mask == 1:
+		if not GameManager.SpendCurrency(20):
+			return
 		add_child(newTower)
 		newTower.global_position = event.global_position
 		audio_stream_player_2d_2.play()
-		GameManager.SpendCurrency(20)
 	elif event is InputEventMouseMotion and event.button_mask == 1:
 		get_child(1).global_position = event.global_position
 	if event is InputEventMouseButton and event.button_mask == 0:
+
 		get_child(1).queue_free()
 		var path = get_tree().get_root().get_node("Node2D/Gnomes")
 		path.add_child(newTower)
 		audio_player.play()
 		newTower.global_position = event.global_position
+		newTower.RemoveColissionSprite()
 		
 		GameManager.AddGnome(newTower)
 		

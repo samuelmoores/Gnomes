@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://0eg0fvxnhy0m" path="res://scripts/game.gd" id="1_7mckg"]
 [ext_resource type="Script" uid="uid://d30dg1dlwyof2" path="res://scripts/enemy_spawner.gd" id="2_eort7"]
+[ext_resource type="Script" uid="uid://c36dl1dukr6hm" path="res://scenes/enemy_end_trigger.gd" id="6_d35k2"]
 [ext_resource type="PackedScene" uid="uid://kymlmbj1wyts" path="res://scenes/GameManager.tscn" id="7_5kwoq"]
 [ext_resource type="Texture2D" uid="uid://b1rbr7nwedw2h" path="res://art/grassland_tiles.png" id="8_2sv30"]
 [ext_resource type="PackedScene" uid="uid://dmydk21vaadmi" path="res://scenes/ui.tscn" id="9_dod7h"]
@@ -26,6 +27,9 @@ _data = {
 "points": PackedVector2Array(0, 0, 0, 0, -700, -85, 0, 0, 0, 0, -549, -163, 0, 0, 0, 0, -295, -34, 0, 0, 0, 0, -200, -86, 0, 0, 0, 0, 29, 30, 0, 0, 0, 0, 319, -113, 0, 0, 0, 0, 725, 91)
 }
 point_count = 7
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5kwoq"]
+radius = 99.50377
 
 [node name="Node2D" type="Node2D" unique_id=2096707777]
 script = ExtResource("1_7mckg")
@@ -64,3 +68,12 @@ size_flags_vertical = 4
 metadata/_edit_use_anchors_ = true
 
 [node name="Gnomes" type="Node" parent="." unique_id=2085419680]
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1670858621]
+position = Vector2(1417, 473)
+script = ExtResource("6_d35k2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1574847952]
+shape = SubResource("CircleShape2D_5kwoq")
+
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
