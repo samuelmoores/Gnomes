@@ -1,7 +1,7 @@
 extends Node2D
 
 
-var currency_total := 20
+var currency_total := 50
 var currency_earned = 0
 var start_round = false
 var end_round = false
@@ -36,12 +36,13 @@ func SpendCurrency(amount: int) -> bool:
 		return false
 	
 func NewRound() -> void:
+	currency_total += currency_earned
+	
 	if(currency_total <= 0):
 		print("you loose")
 		return
 	
 	new_round.emit()
-	currency_total += currency_earned
 	currency_earned = 0
 	enemies_killed = 0
 	enemys_to_kill += 2
