@@ -57,10 +57,10 @@ bus = &"SFX"
 stream = ExtResource("3_yev5y")
 
 [node name="Panel_currency" type="Panel" parent="." unique_id=1559568350]
-offset_left = 1007.0
-offset_top = 291.0
-offset_right = 1228.0
-offset_bottom = 338.0
+offset_left = 728.0
+offset_top = 27.0
+offset_right = 949.0
+offset_bottom = 74.0
 
 [node name="Label" type="Label" parent="Panel_currency" unique_id=478644858]
 layout_mode = 0

@@ -2,11 +2,11 @@
 
 [ext_resource type="Script" uid="uid://dec6udi7xcnm3" path="res://scripts/enemy_movement.gd" id="1_ft8do"]
 [ext_resource type="Script" uid="uid://bucidy0yujjmm" path="res://scripts/enemy_collision.gd" id="2_5wwv6"]
-[ext_resource type="Texture2D" uid="uid://hfqfwm6m07k0" path="res://art/icon.svg" id="3_1vja8"]
+[ext_resource type="Texture2D" uid="uid://c0li62fbkvb6m" path="res://art/bug1.svg" id="3_73enu"]
 [ext_resource type="PackedScene" uid="uid://c32jkq52nphgk" path="res://scenes/enemies/Health_bar.tscn" id="4_iwav8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1"]
-size = Vector2(57, 57)
+size = Vector2(52, 36)
 
 [node name="Enemy" type="PathFollow2D" unique_id=198160575 groups=["enemy"]]
 rotates = false
@@ -18,11 +18,12 @@ modulate = Color(1, 0.14117648, 1, 1)
 script = ExtResource("2_5wwv6")
 
 [node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D" unique_id=2054787616]
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("3_1vja8")
+position = Vector2(-4.9999995, 0)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("3_73enu")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=1181759431 groups=["enemy"]]
-position = Vector2(-0.5, -0.5)
+position = Vector2(0, -8)
 shape = SubResource("RectangleShape2D_1")
 
 [node name="Node2D" parent="CharacterBody2D" unique_id=945672166 instance=ExtResource("4_iwav8")]

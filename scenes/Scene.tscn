@@ -4,7 +4,10 @@
 [ext_resource type="Script" uid="uid://d30dg1dlwyof2" path="res://scripts/enemy_spawner.gd" id="2_eort7"]
 [ext_resource type="Script" uid="uid://c36dl1dukr6hm" path="res://scenes/enemy_end_trigger.gd" id="6_d35k2"]
 [ext_resource type="PackedScene" uid="uid://kymlmbj1wyts" path="res://scenes/GameManager.tscn" id="7_5kwoq"]
+[ext_resource type="Texture2D" uid="uid://c8stlh3ai5esn" path="res://art/flower_complete.png" id="7_dod7h"]
 [ext_resource type="Texture2D" uid="uid://b1rbr7nwedw2h" path="res://art/grassland_tiles.png" id="8_2sv30"]
+[ext_resource type="Texture2D" uid="uid://bl8rm3ris2o0r" path="res://art/flowerstatue_0.png" id="8_ydk4g"]
+[ext_resource type="Texture2D" uid="uid://burj8xiqi0uys" path="res://art/untitled_10-15-2024_01-57-48.png" id="9_ayole"]
 [ext_resource type="PackedScene" uid="uid://dmydk21vaadmi" path="res://scenes/ui.tscn" id="9_dod7h"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2sv30"]
@@ -75,5 +78,18 @@ script = ExtResource("6_d35k2")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1574847952]
 shape = SubResource("CircleShape2D_5kwoq")
+
+[node name="FlowerComplete" type="Sprite2D" parent="." unique_id=1350921431]
+position = Vector2(1238, 446)
+texture = ExtResource("7_dod7h")
+
+[node name="Flowerstatue0" type="Sprite2D" parent="." unique_id=550821336]
+position = Vector2(1243, 254)
+texture = ExtResource("8_ydk4g")
+
+[node name="Untitled10152024015748" type="Sprite2D" parent="." unique_id=112530946]
+position = Vector2(1165, 524)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("9_ayole")
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
