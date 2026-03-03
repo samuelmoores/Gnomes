@@ -74,10 +74,11 @@ offset_bottom = 40.0
 
 [node name="Label" type="Label" parent="MUI/MenuUI" unique_id=165683269]
 layout_mode = 0
-offset_left = 647.0
-offset_top = 127.0
-offset_right = 687.0
-offset_bottom = 150.0
+offset_left = 467.0
+offset_top = 26.0
+offset_right = 724.0
+offset_bottom = 96.0
+theme_override_font_sizes/font_size = 48
 
 [node name="PaintingTexturedWalls" type="Sprite2D" parent="." unique_id=1076730221]
 position = Vector2(645, 369)
