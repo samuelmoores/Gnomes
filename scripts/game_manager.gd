@@ -1,6 +1,5 @@
 extends Node2D
 
-
 var currency_total := 50
 var currency_earned = 0
 var start_round = false

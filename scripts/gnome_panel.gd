@@ -13,7 +13,6 @@ func _ready() -> void:
 	GameManager.new_round.connect(reset)
 	
 func reset() -> void:
-	print("reset")
 	self.visible = true
 	
 
