@@ -25,6 +25,8 @@ func _on_gui_input(event: InputEvent) -> void:
 		audio_player.play()
 		newTower.global_position = event.global_position
 		
+		GameManager.AddGnome(newTower)
+		
 		if(GameManager.currency <= 0):
 			self.visible = false
 			return

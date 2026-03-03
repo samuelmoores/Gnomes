@@ -8,6 +8,7 @@ func take_damage() -> void:
 	health -= 0.25
 	if health <= 0:
 		GameManager.AddCurrency(10)
+		GameManager.EnemyKilled()
 		queue_free()
 	else:
 		health_bar.Decrease()

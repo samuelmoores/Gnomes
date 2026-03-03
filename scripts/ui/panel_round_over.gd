@@ -1,4 +1,4 @@
-extends Label
+extends Panel
 
 
 # Called when the node enters the scene tree for the first time.
@@ -7,6 +7,11 @@ func _ready() -> void:
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(_delta: float) -> void:
-	if(GameManager.RoundGoing() == false):
-		self.text = str(GameManager.currency)
+func _process(delta: float) -> void:
+	if(GameManager.end_round):
+		self.visible = true
+
+
+func _on_button_button_down() -> void:
+	self.visible = false
+	GameManager.NewRound()
