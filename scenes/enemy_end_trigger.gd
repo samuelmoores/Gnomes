@@ -8,9 +8,9 @@ func _on_body_entered(_body: Node2D) -> void:
 	var killed = GameManager.enemies_killed
 	var to_kill = GameManager.enemys_to_kill
 	
-	print("enmies_survived: " + str(enemies_survived))
-	print("kill diference: " + str(to_kill - killed))
+	print("killed: " + str(killed))
+	print("killed: " + str(killed))
 	
-	if enemies_survived == (to_kill - killed):
+	if enemies_survived == (to_kill - killed) and not GameManager.game_over:
 		GameManager.EndRound()
 		enemies_survived = 0

@@ -4,7 +4,7 @@ extends Panel
 @onready var audio_player: AudioStreamPlayer2D = $"../../AudioStreamPlayer2D"
 @onready var audio_stream_player_2d_2: AudioStreamPlayer2D = $"../../AudioStreamPlayer2D2"
 
-@export var tower_price: int  = 40
+@export var tower_price: int  = 30
 var tower_placing = false
 
 var num_gnomes = 0

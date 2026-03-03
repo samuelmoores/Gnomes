@@ -7,13 +7,13 @@ func _ready() -> void:
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(_delta: float) -> void:
-	if(GameManager.end_round):
-		self.visible = true
-	else:
-		self.visible = false
+func _process(delta: float) -> void:
+		if(GameManager.game_over):
+			self.visible = true
+		else:
+			self.visible = false
 
 
 func _on_button_button_down() -> void:
-	self.visible = false
-	GameManager.NewRound()
+	GameManager.Restart()
+	GameManager.game_over = false
