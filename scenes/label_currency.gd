@@ -9,4 +9,4 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
 	if(GameManager.RoundGoing() == false):
-		self.text = str(GameManager.currency)
+		self.text = str(GameManager.currency_total)

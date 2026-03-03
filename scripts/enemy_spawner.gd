@@ -17,8 +17,6 @@ func _ready() -> void:
 
 func _process(delta: float) -> void:
 	
-	print(str(GameManager.enemys_to_kill))
-	
 	_timer += delta
 	if _timer >= _next_spawn_in and GameManager.RoundGoing() and enemy_count < GameManager.enemys_to_kill:
 		_timer = 0.0

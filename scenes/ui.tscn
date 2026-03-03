@@ -105,7 +105,6 @@ offset_left = 157.0
 offset_top = 54.0
 offset_right = 267.0
 offset_bottom = 83.0
-text = "10"
 script = ExtResource("6_8dubc")
 
 [node name="Button" type="Button" parent="Panel" unique_id=1818665320]

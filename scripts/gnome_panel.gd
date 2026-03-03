@@ -6,6 +6,14 @@ extends Panel
 
 var num_gnomes = 0
 
+func _ready() -> void:
+	GameManager.new_round.connect(reset)
+	
+func reset() -> void:
+	print("reset")
+	self.visible = true
+	
+
 func _on_gui_input(event: InputEvent) -> void:
 	var newTower = gnome.instantiate()
 	num_gnomes += 1
@@ -27,7 +35,7 @@ func _on_gui_input(event: InputEvent) -> void:
 		
 		GameManager.AddGnome(newTower)
 		
-		if(GameManager.currency <= 0):
+		if(GameManager.currency_total <= 0):
 			self.visible = false
 			return
 		
