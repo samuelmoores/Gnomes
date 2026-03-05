@@ -1,1 +1,0 @@
-double click gnomes_td to play
