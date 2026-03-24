@@ -1,9 +1,11 @@
-[gd_scene format=3 uid="uid://be2c68oil8gd5"]
+[gd_scene load_steps=7 format=3 uid="uid://be2c68oil8gd5"]
 
-[ext_resource type="Texture2D" uid="uid://cnkbt4uxhyxfp" path="res://guibuttons/BlackButton-Active.png" id="1_26gvy"]
-[ext_resource type="Texture2D" uid="uid://bauhsv153l1pq" path="res://guibuttons/YellowButton-Active.png" id="2_7rswe"]
-[ext_resource type="Texture2D" uid="uid://dco55jxidpoyq" path="res://guibuttons/GreenButton-Active.png" id="3_kr0dp"]
-[ext_resource type="Texture2D" uid="uid://cvv0xu8qggq1q" path="res://guibuttons/RedButton-Active.png" id="4_qxfkb"]
+[ext_resource type="Texture2D" uid="uid://cr5fp5ygxi1c" path="res://guibuttons/ChristmasBalls/ChristmasBalls/01.png" id="1_8wdqt"]
+[ext_resource type="Texture2D" uid="uid://di83b1smrssk5" path="res://guibuttons/ChristmasBalls/ChristmasBalls/07.png" id="2_tofsh"]
+[ext_resource type="Texture2D" uid="uid://dn2jv4yp4wbik" path="res://art/Screenshot_2026-02-26_140425-removebg-preview.png" id="2_xagje"]
+[ext_resource type="Texture2D" uid="uid://h4uofh36ef8c" path="res://guibuttons/ChristmasBalls/ChristmasBalls/04.png" id="3_yk4ek"]
+[ext_resource type="Texture2D" uid="uid://cjahfir7mf1nl" path="res://art/Flamingo1.png" id="4_ah46i"]
+[ext_resource type="Texture2D" uid="uid://bm7vkkj38wjsr" path="res://art/Gnome1.png" id="6_virts"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -16,21 +18,40 @@ offset_right = 3845.0
 offset_bottom = 2160.0
 
 [node name="Icon" type="Sprite2D" parent="CanvasLayer/Control"]
-position = Vector2(42, 39)
-scale = Vector2(0.2, 0.186)
-texture = ExtResource("1_26gvy")
+position = Vector2(51, 52)
+scale = Vector2(0.215, 0.201)
+texture = ExtResource("1_8wdqt")
+
+[node name="Gnome_text" type="TextureRect" parent="CanvasLayer/Control/Icon"]
+offset_left = -234.698
+offset_top = -254.348
+offset_right = 209.302
+offset_bottom = 308.652
+texture = ExtResource("2_xagje")
+metadata/_edit_use_anchors_ = true
 
 [node name="Icon2" type="Sprite2D" parent="CanvasLayer/Control"]
-position = Vector2(135, 40)
-scale = Vector2(0.2, 0.18)
-texture = ExtResource("2_7rswe")
+position = Vector2(169, 55)
+scale = Vector2(0.215, 0.195)
+texture = ExtResource("2_tofsh")
+
+[node name="Flamingo_text" type="TextureRect" parent="CanvasLayer/Control/Icon2"]
+offset_left = -195.349
+offset_top = -210.256
+offset_right = 195.651
+offset_bottom = 174.744
+texture = ExtResource("4_ah46i")
+expand_mode = 1
 
 [node name="Icon3" type="Sprite2D" parent="CanvasLayer/Control"]
-position = Vector2(228, 40)
-scale = Vector2(0.2, 0.186)
-texture = ExtResource("3_kr0dp")
+position = Vector2(292, 55)
+scale = Vector2(0.215, 0.197)
+texture = ExtResource("3_yk4ek")
 
-[node name="Icon4" type="Sprite2D" parent="CanvasLayer/Control"]
-position = Vector2(327, 40)
-scale = Vector2(0.2, 0.186)
-texture = ExtResource("4_qxfkb")
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Control/Icon3"]
+offset_left = -186.046
+offset_top = -167.513
+offset_right = 162.954
+offset_bottom = 157.487
+texture = ExtResource("6_virts")
+expand_mode = 1
