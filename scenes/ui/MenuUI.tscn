@@ -2,7 +2,6 @@
 
 [ext_resource type="Texture2D" uid="uid://dyr7dcw6wdncb" path="res://art/painting-textured-walls.jpg" id="1_76pd4"]
 [ext_resource type="Script" uid="uid://cg761rnhgw6qo" path="res://scripts/ui/MenuUI.gd" id="1_najbj"]
-[ext_resource type="Texture2D" uid="uid://1uli8osr2y4i" path="res://exports/71o0i0fTfmL._AC_UF894,1000_QL80_.jpg" id="2_1skp7"]
 [ext_resource type="AudioStream" uid="uid://b5sngi10fe5g0" path="res://audio/Music/David Guetta ft. Sia  Titanium  Epic Emotional Orchestral Cover 2026 (Cinematic Power).mp3" id="3_hndkf"]
 [ext_resource type="Texture2D" uid="uid://c6j0s2565ojjj" path="res://art/picture_frame.png" id="4_i7wti"]
 [ext_resource type="AudioStream" uid="uid://sbs4bma7pex7" path="res://audio/SFX/Click_Standard_00.mp3" id="6_i7wti"]
@@ -36,7 +35,6 @@ offset_top = 244.0
 offset_right = 1471.0
 offset_bottom = 1139.0
 scale = Vector2(0.2, 0.2)
-texture = ExtResource("2_1skp7")
 
 [node name="PictureFrame" type="Sprite2D" parent="MUI/MenuUI" unique_id=423257306]
 position = Vector2(315.99994, 330.49997)
@@ -45,18 +43,10 @@ texture = ExtResource("4_i7wti")
 
 [node name="Play" type="Button" parent="MUI/MenuUI" unique_id=589145835]
 layout_mode = 0
-offset_left = 753.0
+offset_left = 761.0
 offset_top = 132.0
-offset_right = 1079.0
+offset_right = 1087.0
 offset_bottom = 193.0
-theme_override_font_sizes/font_size = 100
-
-[node name="Quit" type="Button" parent="MUI/MenuUI" unique_id=685050257]
-layout_mode = 0
-offset_left = 789.0
-offset_top = 522.0
-offset_right = 1089.0
-offset_bottom = 582.0
 theme_override_font_sizes/font_size = 100
 
 [node name="Credits" type="Button" parent="MUI/MenuUI" unique_id=2049783285]
@@ -65,6 +55,14 @@ offset_left = 692.0
 offset_top = 300.0
 offset_right = 1156.0
 offset_bottom = 372.0
+theme_override_font_sizes/font_size = 100
+
+[node name="Quit" type="Button" parent="MUI/MenuUI" unique_id=685050257]
+layout_mode = 0
+offset_left = 774.0
+offset_top = 468.0
+offset_right = 1074.0
+offset_bottom = 528.0
 theme_override_font_sizes/font_size = 100
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MUI/MenuUI" unique_id=976931847]
@@ -101,7 +99,7 @@ stream = ExtResource("7_4yr37")
 [connection signal="button_down" from="MUI/MenuUI/Play" to="MUI/MenuUI" method="_on_play_button_down"]
 [connection signal="mouse_entered" from="MUI/MenuUI/Play" to="MUI/MenuUI" method="_on_play_mouse_entered"]
 [connection signal="pressed" from="MUI/MenuUI/Play" to="MUI/MenuUI" method="_on_play_pressed"]
-[connection signal="button_down" from="MUI/MenuUI/Quit" to="MUI/MenuUI" method="_on_quit_button_down"]
-[connection signal="mouse_entered" from="MUI/MenuUI/Quit" to="MUI/MenuUI" method="_on_quit_mouse_entered"]
 [connection signal="button_down" from="MUI/MenuUI/Credits" to="MUI/MenuUI" method="_on_credits_button_down"]
 [connection signal="mouse_entered" from="MUI/MenuUI/Credits" to="MUI/MenuUI" method="_on_credits_mouse_entered"]
+[connection signal="button_down" from="MUI/MenuUI/Quit" to="MUI/MenuUI" method="_on_quit_button_down"]
+[connection signal="mouse_entered" from="MUI/MenuUI/Quit" to="MUI/MenuUI" method="_on_quit_mouse_entered"]
