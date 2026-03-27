@@ -36,6 +36,7 @@ offset_top = 244.0
 offset_right = 1471.0
 offset_bottom = 1139.0
 scale = Vector2(0.2, 0.2)
+texture = ExtResource("2_1skp7")
 
 [node name="PictureFrame" type="Sprite2D" parent="MUI/MenuUI" unique_id=423257306]
 position = Vector2(315.99994, 330.49997)
