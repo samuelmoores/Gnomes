@@ -1,2 +1,5 @@
 # Godot auto-generated UID files
 *.gd.uid
+
+# Godot generated cache/editor files
+.godot/
