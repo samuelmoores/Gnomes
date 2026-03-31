@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://2qm2t5ejck2m"]
 
-[ext_resource type="Script" uid="uid://fp1w7to5i272" path="res://scripts/attack_object.gd" id="1_cuu7f"]
+[ext_resource type="Script" uid="uid://fp1w7to5i272" path="res://scripts/towers/attack_object.gd" id="1_cuu7f"]
 [ext_resource type="Texture2D" uid="uid://hfqfwm6m07k0" path="res://art/icon.svg" id="2_x3c5l"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_l7a2r"]

@@ -1,14 +1,14 @@
 [gd_scene format=3 uid="uid://dmydk21vaadmi"]
 
 [ext_resource type="PackedScene" uid="uid://ctreb214cypco" path="res://scenes/towers/gnome_panel.tscn" id="1_nt7q6"]
-[ext_resource type="Script" uid="uid://c8fsi6y0gr1bq" path="res://scripts/start_round_button.gd" id="3_gdt2y"]
+[ext_resource type="Script" uid="uid://c8fsi6y0gr1bq" path="res://scripts/ui/start_round_button.gd" id="3_gdt2y"]
 [ext_resource type="AudioStream" uid="uid://sbs4bma7pex7" path="res://audio/SFX/Click_Standard_00.mp3" id="3_yev5y"]
 [ext_resource type="AudioStream" uid="uid://bfoh55kp26f44" path="res://audio/SFX/Click_Standard_01.mp3" id="4_gdt2y"]
-[ext_resource type="Script" uid="uid://b0ajopbx4g6ym" path="res://scenes/label_currency.gd" id="5_wm3ai"]
+[ext_resource type="Script" uid="uid://b0ajopbx4g6ym" path="res://scripts/ui/label_currency.gd" id="5_wm3ai"]
 [ext_resource type="Script" uid="uid://b26rhicjxut14" path="res://scripts/ui/label_currency_gained_value.gd" id="6_8dubc"]
 [ext_resource type="Script" uid="uid://q850nof6biay" path="res://scripts/ui/panel_round_over.gd" id="6_p7vwb"]
-[ext_resource type="Script" uid="uid://bsbxuycvit436" path="res://scenes/label_gardern_health_value.gd" id="8_ktti3"]
-[ext_resource type="Script" uid="uid://c5axqeky2f3pj" path="res://scenes/panel_game_over.gd" id="9_cgfq5"]
+[ext_resource type="Script" uid="uid://bsbxuycvit436" path="res://scripts/ui/label_gardern_health_value.gd" id="8_ktti3"]
+[ext_resource type="Script" uid="uid://c5axqeky2f3pj" path="res://scripts/ui/panel_game_over.gd" id="9_cgfq5"]
 
 [node name="UI" type="CanvasLayer" unique_id=996845106]
 
