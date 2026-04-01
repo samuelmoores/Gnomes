@@ -1,19 +1,20 @@
 [gd_scene format=3 uid="uid://cyxd6laqbvcio"]
 
-[ext_resource type="Script" uid="uid://nyaovryf27va" path="res://scripts/towers/flamingo.gd" id="1_22yti"]
+[ext_resource type="Script" uid="uid://ulffx6dvpimf" path="res://scripts/towers/flamingo.gd" id="1_22yti"]
+[ext_resource type="Texture2D" uid="uid://cjahfir7mf1nl" path="res://art/Flamingo1.png" id="2_g0thn"]
 [ext_resource type="Script" uid="uid://cb63g5jleyxey" path="res://scripts/components/range_detector.gd" id="2_rangedet"]
-[ext_resource type="Script" uid="uid://b7gfl63nd7nxj" path="res://scripts/components/flamingo_leg.gd" id="4_g0thn"]
-[ext_resource type="Texture2D" uid="uid://hfqfwm6m07k0" path="res://art/icon.svg" id="4_icon"]
+[ext_resource type="Script" uid="uid://s1veq2rg0xfp" path="res://scripts/components/flamingo_leg.gd" id="4_g0thn"]
+[ext_resource type="Script" uid="uid://bdntvpcdvafj" path="res://scripts/components/slow_aura.gd" id="5_gyw84"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_eort7"]
-radius = 100.0
+radius = 74.0
 
 [node name="Flamingo" type="Node2D" unique_id=1901038522]
 script = ExtResource("1_22yti")
 
 [node name="FlamingoSprite" type="Sprite2D" parent="." unique_id=630240792]
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("4_icon")
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("2_g0thn")
 
 [node name="RangeDetector" type="Area2D" parent="." unique_id=2112214880]
 script = ExtResource("2_rangedet")
@@ -23,3 +24,6 @@ shape = SubResource("CircleShape2D_eort7")
 
 [node name="FlamingoLeg" type="Node" parent="." unique_id=670514479]
 script = ExtResource("4_g0thn")
+
+[node name="SlowAura" type="Node" parent="." unique_id=1084250890]
+script = ExtResource("5_gyw84")

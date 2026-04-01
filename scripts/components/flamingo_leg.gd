@@ -1,3 +1,3 @@
 extends Node
 
-@export var attack
+# TODO

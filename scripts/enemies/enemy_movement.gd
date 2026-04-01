@@ -1,6 +1,8 @@
 extends PathFollow2D
 
-@export var speed := 100.0
+@export var default_speed := 100.0
+var current_speed := default_speed
+var speed_multiplier := 1.0
 
 
 var direction
@@ -11,7 +13,8 @@ func _ready() -> void:
 
 
 func _process(delta):
-	progress += speed * delta
+	progress += current_speed * delta * speed_multiplier
 	var current_position = global_position
 	direction = current_position - previous_position
 	previous_position = current_position
+	

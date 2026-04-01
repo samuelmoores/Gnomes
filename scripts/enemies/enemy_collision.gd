@@ -12,3 +12,8 @@ func take_damage() -> void:
 		queue_free()
 	else:
 		health_bar.Decrease()
+		
+func set_speed_multiplier(mult):
+	health -= 0.25
+	health_bar.Decrease()
+	get_parent().speed_multiplier = mult
