@@ -1,40 +1,40 @@
 [gd_scene format=3 uid="uid://cw1qwo02vif7s"]
 
-[ext_resource type="Script" uid="uid://bgnu3oy6oxfbw" path="res://scripts/towers/gnome.gd" id="1_2fhd7"]
-[ext_resource type="Script" path="res://scripts/components/range_detector.gd" id="2_rangedet"]
-[ext_resource type="Script" path="res://scripts/components/attack_timer.gd" id="3_attacktmr"]
-[ext_resource type="Script" path="res://scripts/components/projectile_launcher.gd" id="4_projlaunch"]
+[ext_resource type="Script" uid="uid://k57h28vvwpq4" path="res://scripts/towers/gnome.gd" id="1_2fhd7"]
+[ext_resource type="Script" uid="uid://cb63g5jleyxey" path="res://scripts/components/range_detector.gd" id="2_rangedet"]
+[ext_resource type="Script" uid="uid://c2od1t74y4j4m" path="res://scripts/components/attack_timer.gd" id="3_attacktmr"]
+[ext_resource type="Script" uid="uid://bpoe12ykk7iyx" path="res://scripts/components/rock_launcher.gd" id="4_projlaunch"]
 [ext_resource type="Texture2D" uid="uid://syn4dncqvqie" path="res://art/circle-34583_1280.png" id="5_circle"]
 [ext_resource type="Texture2D" uid="uid://bm7vkkj38wjsr" path="res://art/Gnome1.png" id="6_gnometex"]
-[ext_resource type="PackedScene" path="res://scenes/towers/AttackObject.tscn" id="7_attackobj"]
+[ext_resource type="PackedScene" uid="uid://2qm2t5ejck2m" path="res://scenes/towers/Rock.tscn" id="7_attackobj"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_j2eoc"]
-radius = 548.0584
+radius = 550.0
 
-[node name="Gnome" type="Node2D"]
+[node name="Gnome" type="Node2D" unique_id=17828033]
 script = ExtResource("1_2fhd7")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1717704543]
 modulate = Color(1, 1, 1, 0.14117648)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("5_circle")
 
-[node name="GnomeSprite" type="Sprite2D" parent="."]
+[node name="GnomeSprite" type="Sprite2D" parent="." unique_id=596096086]
 position = Vector2(-2.9999962, -17.999994)
 rotation = 3.1415927
 scale = Vector2(0.07, 0.07)
 texture = ExtResource("6_gnometex")
 
-[node name="RangeDetector" type="Area2D" parent="."]
+[node name="RangeDetector" type="Area2D" parent="." unique_id=47780893]
 script = ExtResource("2_rangedet")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="RangeDetector"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RangeDetector" unique_id=1281456248]
 scale = Vector2(0.5, 0.5)
 shape = SubResource("CircleShape2D_j2eoc")
 
-[node name="AttackTimer" type="Node" parent="."]
+[node name="AttackTimer" type="Node" parent="." unique_id=195276562]
 script = ExtResource("3_attacktmr")
 
-[node name="ProjectileLauncher" type="Node" parent="."]
+[node name="RockLauncher" type="Node" parent="." unique_id=1707850521]
 script = ExtResource("4_projlaunch")
 projectile_scene = ExtResource("7_attackobj")

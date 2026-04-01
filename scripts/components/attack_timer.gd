@@ -2,25 +2,35 @@ extends Node
 
 signal attack_ready(enemy)
 
-@export var interval_min := 1.5
-@export var interval_max := 2.5
+@export var interval := 1.5
 
-var _timers := {}
+var timer := interval
+var enemies_in_range:= []
 
 func add_enemy(enemy) -> void:
-	_timers[enemy] = 0.0
-	attack_ready.emit(enemy)
+	enemies_in_range.append(enemy)
+	if timer >= interval:
+		timer -= interval
+		attack_ready.emit(enemies_in_range[0])
+	
 
 func remove_enemy(enemy) -> void:
-	_timers.erase(enemy)
+	enemies_in_range.erase(enemy)
 
-func _process(delta) -> void:
-	for enemy in _timers.keys():
+func _process(delta) -> void: 
+	for enemy in enemies_in_range.duplicate():
 		if not is_instance_valid(enemy):
-			_timers.erase(enemy)
+			enemies_in_range.erase(enemy)
 			continue
 
-		_timers[enemy] += delta
-		if _timers[enemy] >= randf_range(interval_min, interval_max):
-			_timers[enemy] = 0.0
-			attack_ready.emit(enemy)
+	if timer < interval:
+		timer += delta
+	if len(enemies_in_range) > 0:
+		if timer >= interval:
+			enemies_in_range.sort_custom(func(a, b):
+				var a_progress = a.get_parent().progress_ratio
+				var b_progress = b.get_parent().progress_ratio
+				return a_progress > b_progress)
+				
+			timer -= interval
+			attack_ready.emit(enemies_in_range[0])

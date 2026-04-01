@@ -1,13 +1,13 @@
 [gd_scene format=3 uid="uid://2qm2t5ejck2m"]
 
-[ext_resource type="Script" uid="uid://fp1w7to5i272" path="res://scripts/towers/attack_object.gd" id="1_cuu7f"]
+[ext_resource type="Script" uid="uid://dvcxjov0osclw" path="res://scripts/towers/rock.gd" id="1_c86xn"]
 [ext_resource type="Texture2D" uid="uid://hfqfwm6m07k0" path="res://art/icon.svg" id="2_x3c5l"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_l7a2r"]
 radius = 8.0
 
 [node name="Node2D" type="RigidBody2D" unique_id=894977343 groups=["attack"]]
-script = ExtResource("1_cuu7f")
+script = ExtResource("1_c86xn")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=355274744 groups=["attack"]]
 shape = SubResource("CircleShape2D_l7a2r")

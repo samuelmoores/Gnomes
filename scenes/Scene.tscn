@@ -1,8 +1,8 @@
 [gd_scene format=4 uid="uid://e8285gx76yeb"]
 
-[ext_resource type="Script" uid="uid://0eg0fvxnhy0m" path="res://scripts/game/game.gd" id="1_7mckg"]
-[ext_resource type="Script" uid="uid://d30dg1dlwyof2" path="res://scripts/enemies/enemy_spawner.gd" id="2_eort7"]
-[ext_resource type="Script" uid="uid://c36dl1dukr6hm" path="res://scripts/enemies/enemy_end_trigger.gd" id="6_d35k2"]
+[ext_resource type="Script" uid="uid://b5ecumsfp2t84" path="res://scripts/game/game.gd" id="1_7mckg"]
+[ext_resource type="Script" uid="uid://b6lnvlyk0lt1a" path="res://scripts/enemies/enemy_spawner.gd" id="2_eort7"]
+[ext_resource type="Script" uid="uid://dnsfcotmik5a5" path="res://scripts/enemies/enemy_end_trigger.gd" id="6_d35k2"]
 [ext_resource type="PackedScene" uid="uid://kymlmbj1wyts" path="res://scenes/GameManager.tscn" id="7_5kwoq"]
 [ext_resource type="Texture2D" uid="uid://c8stlh3ai5esn" path="res://art/flower_complete.png" id="7_dod7h"]
 [ext_resource type="Texture2D" uid="uid://b1rbr7nwedw2h" path="res://art/grassland_tiles.png" id="8_2sv30"]
