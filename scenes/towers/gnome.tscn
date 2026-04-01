@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://cw1qwo02vif7s"]
 
-[ext_resource type="Script" uid="uid://k57h28vvwpq4" path="res://scripts/towers/gnome.gd" id="1_2fhd7"]
+[ext_resource type="Script" uid="uid://bgnu3oy6oxfbw" path="res://scripts/towers/gnome.gd" id="1_2fhd7"]
 [ext_resource type="Script" uid="uid://cb63g5jleyxey" path="res://scripts/components/range_detector.gd" id="2_rangedet"]
 [ext_resource type="Script" uid="uid://c2od1t74y4j4m" path="res://scripts/components/attack_timer.gd" id="3_attacktmr"]
-[ext_resource type="Script" uid="uid://bpoe12ykk7iyx" path="res://scripts/components/rock_launcher.gd" id="4_projlaunch"]
+[ext_resource type="Script" uid="uid://hqh6f7hl1odr" path="res://scripts/components/rock_launcher.gd" id="4_projlaunch"]
 [ext_resource type="Texture2D" uid="uid://syn4dncqvqie" path="res://art/circle-34583_1280.png" id="5_circle"]
 [ext_resource type="Texture2D" uid="uid://bm7vkkj38wjsr" path="res://art/Gnome1.png" id="6_gnometex"]
 [ext_resource type="PackedScene" uid="uid://2qm2t5ejck2m" path="res://scenes/towers/Rock.tscn" id="7_attackobj"]

@@ -23,4 +23,4 @@ func launch(enemy_body) -> void:
 	projectile.set("launch_velocity", dir * speed)
 	self.get_parent().set("rotation", dir.angle() - deg_to_rad(90))
 
-	owner.get_parent().add_child(projectile)
+	owner.get_parent().add_child.call_deferred(projectile)
