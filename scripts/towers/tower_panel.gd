@@ -1,33 +1,31 @@
 extends Panel
 
-@onready var gnome = preload("res://scenes/towers/gnome.tscn")
+@export var tower_scene: PackedScene
+@export var tower_price: int = 30
+
 @onready var audio_player: AudioStreamPlayer2D = $"../../AudioStreamPlayer2D"
 @onready var audio_stream_player_2d_2: AudioStreamPlayer2D = $"../../AudioStreamPlayer2D2"
+@onready var price_label: Label = $PriceLabel
 
-@export var tower_price: int  = 30
 var tower_placing = false
 var active_tower = null
 
-var num_gnomes = 0
-
 func _ready() -> void:
 	GameManager.new_round.connect(reset)
+	price_label.text = str(tower_price)
 
 func reset() -> void:
 	self.visible = true
-
 
 func _on_gui_input(event: InputEvent) -> void:
 	if GameManager.currency_total < tower_price and not tower_placing:
 		return
 
-	# process new gnome
 	if event is InputEventMouseButton and event.button_mask == 1:
 		GameManager.SpendCurrency(tower_price)
 		tower_placing = true
-		num_gnomes += 1
 
-		active_tower = gnome.instantiate()
+		active_tower = tower_scene.instantiate()
 		add_child(active_tower)
 		active_tower.global_position = event.global_position
 		audio_stream_player_2d_2.play()
@@ -45,10 +43,9 @@ func _on_gui_input(event: InputEvent) -> void:
 		active_tower.global_position = event.global_position
 		active_tower.RemoveColissionSprite()
 
-		GameManager.AddGnome(active_tower)
+		GameManager.AddTower(active_tower)
 		active_tower = null
 
-		if(GameManager.currency_total <= 0):
+		if GameManager.currency_total <= 0:
 			self.visible = false
 			return
-		

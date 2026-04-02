@@ -9,7 +9,6 @@
 [ext_resource type="Texture2D" uid="uid://bl8rm3ris2o0r" path="res://art/flowerstatue_0.png" id="8_ydk4g"]
 [ext_resource type="Texture2D" uid="uid://burj8xiqi0uys" path="res://art/untitled_10-15-2024_01-57-48.png" id="9_ayole"]
 [ext_resource type="PackedScene" uid="uid://dmydk21vaadmi" path="res://scenes/ui.tscn" id="9_dod7h"]
-[ext_resource type="PackedScene" uid="uid://cyxd6laqbvcio" path="res://scenes/towers/flamingo.tscn" id="10_ydk4g"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2sv30"]
 texture = ExtResource("8_2sv30")
@@ -92,8 +91,5 @@ texture = ExtResource("8_ydk4g")
 position = Vector2(1165, 524)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("9_ayole")
-
-[node name="Flamingo" parent="." unique_id=1901038522 instance=ExtResource("10_ydk4g")]
-position = Vector2(269, 367)
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]

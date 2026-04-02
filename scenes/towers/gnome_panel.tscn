@@ -1,17 +1,28 @@
 [gd_scene format=3 uid="uid://ctreb214cypco"]
 
-[ext_resource type="Script" uid="uid://c0patrrasnaov" path="res://scripts/towers/gnome_panel.gd" id="1_cfglp"]
-[ext_resource type="Texture2D" uid="uid://dn2jv4yp4wbik" path="res://art/Screenshot_2026-02-26_140425-removebg-preview.png" id="2_v4wk1"]
+[ext_resource type="Script" uid="uid://cxjiepxj8u85w" path="res://scripts/towers/tower_panel.gd" id="1_rxcho"]
+[ext_resource type="PackedScene" uid="uid://cw1qwo02vif7s" path="res://scenes/towers/gnome.tscn" id="2_ux7y6"]
+[ext_resource type="Texture2D" uid="uid://bm7vkkj38wjsr" path="res://art/Gnome1.png" id="3_rxcho"]
 
 [node name="Panel" type="Panel" unique_id=386781174]
 custom_minimum_size = Vector2(80, 80)
 offset_right = 40.0
 offset_bottom = 40.0
-script = ExtResource("1_cfglp")
+script = ExtResource("1_rxcho")
+tower_scene = ExtResource("2_ux7y6")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1124739805]
-position = Vector2(41.00003, 42.000004)
-scale = Vector2(0.2, 0.2)
-texture = ExtResource("2_v4wk1")
+position = Vector2(39.999996, 30)
+rotation = 3.1415927
+scale = Vector2(0.04, 0.038)
+texture = ExtResource("3_rxcho")
+
+[node name="PriceLabel" type="Label" parent="." unique_id=1705973438]
+layout_mode = 0
+offset_top = 57.0
+offset_right = 79.0
+offset_bottom = 80.0
+text = "00"
+horizontal_alignment = 1
 
 [connection signal="gui_input" from="." to="." method="_on_gui_input"]

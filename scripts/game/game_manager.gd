@@ -6,7 +6,7 @@ var start_round = false
 var end_round = false
 var enemys_to_kill = 4
 var enemies_killed = 0
-var gnomes = []
+var towers = []
 signal new_round
 var garden_health = 100
 var game_over = false
@@ -52,12 +52,12 @@ func NewRound() -> void:
 	enemys_to_kill += 2
 	end_round = false
 	start_round = false
-	for gnome in gnomes:
-		gnome.queue_free()
-	gnomes.clear()
-	
-func AddGnome(new_gnome: Node2D) -> void:
-	gnomes.append(new_gnome)
+	for tower in towers:
+		tower.queue_free()
+	towers.clear()
+
+func AddTower(new_tower: Node2D) -> void:
+	towers.append(new_tower)
 	
 func DamageGarden() -> void:
 	if garden_health >= 10:
@@ -75,7 +75,7 @@ func Restart() -> void:
 	enemies_killed = 0
 	garden_health = 100
 	game_over = false
-	for gnome in gnomes:
-		gnome.queue_free()
-	gnomes.clear()
+	for tower in towers:
+		tower.queue_free()
+	towers.clear()
 	new_round.emit()

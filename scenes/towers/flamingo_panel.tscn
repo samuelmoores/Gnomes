@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://dkejacuw7o5qo"]
+
+[ext_resource type="Script" uid="uid://cxjiepxj8u85w" path="res://scripts/towers/tower_panel.gd" id="1_w2k55"]
+[ext_resource type="Texture2D" uid="uid://cjahfir7mf1nl" path="res://art/Flamingo1.png" id="2_hgoic"]
+[ext_resource type="PackedScene" uid="uid://cyxd6laqbvcio" path="res://scenes/towers/flamingo.tscn" id="2_w2k55"]
+
+[node name="Panel" type="Panel" unique_id=386781174]
+custom_minimum_size = Vector2(80, 80)
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_w2k55")
+tower_scene = ExtResource("2_w2k55")
+tower_price = 15
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1124739805]
+position = Vector2(39, 33)
+scale = Vector2(0.043666672, 0.03825)
+texture = ExtResource("2_hgoic")
+
+[node name="PriceLabel" type="Label" parent="." unique_id=1705973438]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 56.0
+offset_right = 79.0
+offset_bottom = 79.0
+text = "00"
+horizontal_alignment = 1
+
+[connection signal="gui_input" from="." to="." method="_on_gui_input"]
