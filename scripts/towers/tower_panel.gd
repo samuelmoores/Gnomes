@@ -3,8 +3,8 @@ extends Panel
 @export var tower_scene: PackedScene
 @export var tower_price: int = 30
 
-@onready var audio_player: AudioStreamPlayer2D = $"../../AudioStreamPlayer2D"
-@onready var audio_stream_player_2d_2: AudioStreamPlayer2D = $"../../AudioStreamPlayer2D2"
+@onready var audio_player: AudioStreamPlayer2D = $"../../../AudioStreamPlayer2D"
+@onready var audio_stream_player_2d_2: AudioStreamPlayer2D = $"../../../AudioStreamPlayer2D2"
 @onready var price_label: Label = $PriceLabel
 
 var tower_placing = false

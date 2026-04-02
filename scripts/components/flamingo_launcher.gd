@@ -2,9 +2,10 @@ extends Node
 
 @export var miss_chance := 0
 
-@onready var leg = $FlamingoLeg
-@onready var leg_area = $FlamingoLeg/Area2D
-@onready var attack_timer = $AttackTimer
+@onready var leg = $"../FlamingoLeg"
+@onready var leg_area = $"../FlamingoLeg/Area2D"
+@onready var attack_timer = $"../AttackTimer"
+
 
 func launch(enemy_body):
 	if not is_instance_valid(enemy_body):

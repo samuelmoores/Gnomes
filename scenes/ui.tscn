@@ -1,60 +1,63 @@
 [gd_scene format=3 uid="uid://dmydk21vaadmi"]
 
 [ext_resource type="PackedScene" uid="uid://ctreb214cypco" path="res://scenes/towers/gnome_panel.tscn" id="1_nt7q6"]
-[ext_resource type="Script" uid="uid://c8fsi6y0gr1bq" path="res://scripts/start_round_button.gd" id="3_gdt2y"]
+[ext_resource type="Texture2D" uid="uid://j3h3cf77buyi" path="res://art/wenrexaassetsuicasual/Purple/Panels/Panel8.png" id="1_vdcm2"]
+[ext_resource type="PackedScene" uid="uid://dkejacuw7o5qo" path="res://scenes/towers/flamingo_panel.tscn" id="3_6rmj2"]
+[ext_resource type="Script" uid="uid://c8fsi6y0gr1bq" path="res://scripts/ui/start_round_button.gd" id="3_gdt2y"]
 [ext_resource type="AudioStream" uid="uid://sbs4bma7pex7" path="res://audio/SFX/Click_Standard_00.mp3" id="3_yev5y"]
+[ext_resource type="Texture2D" uid="uid://dapyr23xe3eyo" path="res://art/pink GUI/Button12.png" id="4_6rmj2"]
 [ext_resource type="AudioStream" uid="uid://bfoh55kp26f44" path="res://audio/SFX/Click_Standard_01.mp3" id="4_gdt2y"]
-[ext_resource type="Script" uid="uid://b0ajopbx4g6ym" path="res://scenes/label_currency.gd" id="5_wm3ai"]
+[ext_resource type="Script" uid="uid://b0ajopbx4g6ym" path="res://scripts/ui/label_currency.gd" id="5_wm3ai"]
 [ext_resource type="Script" uid="uid://b26rhicjxut14" path="res://scripts/ui/label_currency_gained_value.gd" id="6_8dubc"]
-[ext_resource type="Script" uid="uid://q850nof6biay" path="res://scripts/ui/TextureReact_round.gd" id="6_p7vwb"]
-[ext_resource type="Script" uid="uid://bsbxuycvit436" path="res://scenes/label_gardern_health_value.gd" id="8_ktti3"]
-[ext_resource type="Script" uid="uid://c5axqeky2f3pj" path="res://scenes/panel_game_over.gd" id="9_cgfq5"]
+[ext_resource type="Script" uid="uid://br8513iedofnm" path="res://scripts/ui/panel_round_over.gd" id="6_p7vwb"]
+[ext_resource type="Script" uid="uid://bsbxuycvit436" path="res://scripts/ui/label_gardern_health_value.gd" id="8_ktti3"]
+[ext_resource type="Texture2D" uid="uid://b1j1jigjskdrq" path="res://art/pink GUI/Panel2.png" id="8_vsj0x"]
+[ext_resource type="Script" uid="uid://c5axqeky2f3pj" path="res://scripts/ui/panel_game_over.gd" id="9_cgfq5"]
+[ext_resource type="Texture2D" uid="uid://05sbcskqhb7h" path="res://art/pink GUI/Panel3.png" id="10_h1mc3"]
+[ext_resource type="Texture2D" uid="uid://dk4pvn8cmsjoe" path="res://art/pink GUI/Bar5.png" id="13_cof4p"]
+[ext_resource type="Texture2D" uid="uid://bbifbper5wfd6" path="res://art/pink GUI/Button6.png" id="16_cof4p"]
 
 [node name="UI" type="CanvasLayer" unique_id=1678204392]
 
-[node name="Panel_gnomes" type="TextureRect" parent="." unique_id=474009617]
-offset_left = 970.0
-offset_top = 20.0
-offset_right = 1222.0
-offset_bottom = 169.0
+[node name="TextureRect_Towers" type="TextureRect" parent="." unique_id=474009617]
+offset_left = 1030.0
+offset_top = 25.0
+offset_right = 1440.0
+offset_bottom = 335.0
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_vdcm2")
+stretch_mode = 4
 
-[node name="FlowContainer" type="FlowContainer" parent="Panel_gnomes" unique_id=155940742]
+[node name="Label" type="Label" parent="TextureRect_Towers" unique_id=996855790]
 layout_mode = 0
-offset_left = 15.0
-offset_top = 13.0
-offset_right = 242.0
-offset_bottom = 136.0
+offset_left = 30.0
+offset_top = 12.0
+offset_right = 380.0
+offset_bottom = 57.0
+theme_override_font_sizes/font_size = 32
+text = "Towers"
+horizontal_alignment = 1
+vertical_alignment = 1
 
-[node name="Panel" parent="Panel_gnomes" unique_id=248678461 instance=ExtResource("1_nt7q6")]
+[node name="FlowContainer" type="FlowContainer" parent="TextureRect_Towers" unique_id=155940742]
 layout_mode = 0
-offset_left = 24.0
-offset_top = 48.0
-offset_right = 104.0
-offset_bottom = 128.0
+offset_left = 28.0
+offset_top = 86.0
+offset_right = 384.0
+offset_bottom = 290.0
 
-[node name="Label" type="Label" parent="Panel_gnomes" unique_id=996855790]
-layout_mode = 0
-offset_left = 53.0
-offset_top = 9.0
-offset_right = 77.0
-offset_bottom = 32.0
-text = "30"
+[node name="Panel" parent="TextureRect_Towers/FlowContainer" unique_id=386781174 instance=ExtResource("1_nt7q6")]
+layout_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="." unique_id=387404999]
-offset_left = 966.0
-offset_top = 198.0
-offset_right = 1226.0
-offset_bottom = 268.0
+[node name="Panel2" parent="TextureRect_Towers/FlowContainer" unique_id=676561448 instance=ExtResource("3_6rmj2")]
+layout_mode = 2
 
-[node name="Button" type="Button" parent="TextureRect" unique_id=930045979]
-layout_mode = 0
-offset_left = 5.0000224
-offset_top = 5.0
-offset_right = 206.61293
-offset_bottom = 65.0
-scale = Vector2(1.24, 1)
-text = "Start Round"
-vertical_icon_alignment = 0
+[node name="Button_StartRound" type="Button" parent="." unique_id=992358391]
+offset_left = 1095.0
+offset_top = 195.0
+offset_right = 1173.0
+offset_bottom = 273.0
+icon = ExtResource("4_6rmj2")
 script = ExtResource("3_gdt2y")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1951031073]
@@ -64,29 +67,35 @@ bus = &"SFX"
 [node name="AudioStreamPlayer2D2" type="AudioStreamPlayer2D" parent="." unique_id=879588778]
 stream = ExtResource("3_yev5y")
 
-[node name="Panel_currency" type="TextureRect" parent="." unique_id=566346623]
-offset_left = 728.0
-offset_top = 27.0
-offset_right = 949.0
-offset_bottom = 74.0
+[node name="TextureRect_Currency" type="TextureRect" parent="." unique_id=566346623]
+offset_left = 803.0
+offset_top = 28.0
+offset_right = 1313.0
+offset_bottom = 238.0
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("8_vsj0x")
+stretch_mode = 4
 
-[node name="Label" type="Label" parent="Panel_currency" unique_id=255079869]
+[node name="Label" type="Label" parent="TextureRect_Currency" unique_id=255079869]
 layout_mode = 0
-offset_left = 103.0
-offset_top = 9.0
-offset_right = 212.0
-offset_bottom = 39.0
+offset_left = 48.0
+offset_top = 92.0
+offset_right = 472.0
+offset_bottom = 172.0
+theme_override_font_sizes/font_size = 64
 text = "0"
+horizontal_alignment = 1
 vertical_alignment = 1
 script = ExtResource("5_wm3ai")
 
-[node name="Label2" type="Label" parent="Panel_currency" unique_id=1085615608]
+[node name="Label2" type="Label" parent="TextureRect_Currency" unique_id=1085615608]
 layout_mode = 0
 offset_left = 9.0
 offset_top = 8.0
-offset_right = 105.0
-offset_bottom = 38.0
-text = "Currencey:"
+offset_right = 488.0
+offset_bottom = 56.0
+theme_override_font_sizes/font_size = 32
+text = "Currencey"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -96,63 +105,68 @@ offset_left = 950.0
 offset_top = 388.0
 offset_right = 1234.0
 offset_bottom = 549.0
+texture = ExtResource("10_h1mc3")
 script = ExtResource("6_p7vwb")
 
 [node name="Label_round_over" type="Label" parent="Panel_RoundOver" unique_id=119652810]
 layout_mode = 0
-offset_left = 58.0
+offset_left = 13.0
 offset_top = 11.0
-offset_right = 210.0
-offset_bottom = 40.0
+offset_right = 269.0
+offset_bottom = 60.0
+theme_override_font_sizes/font_size = 32
 text = "Round Over"
 horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Label_currency_gained" type="Label" parent="Panel_RoundOver" unique_id=1246827393]
 layout_mode = 0
-offset_left = 11.0
-offset_top = 55.0
-offset_right = 163.0
-offset_bottom = 84.0
+offset_left = 15.0
+offset_top = 86.0
+offset_right = 167.0
+offset_bottom = 115.0
 text = "Currency Earned:"
 horizontal_alignment = 1
 
 [node name="Label_currency_gained_value" type="Label" parent="Panel_RoundOver" unique_id=1600537251]
 layout_mode = 0
-offset_left = 157.0
-offset_top = 54.0
-offset_right = 267.0
-offset_bottom = 83.0
+offset_left = 161.0
+offset_top = 85.0
+offset_right = 271.0
+offset_bottom = 114.0
 script = ExtResource("6_8dubc")
 
 [node name="Button" type="Button" parent="Panel_RoundOver" unique_id=919247415]
 layout_mode = 0
-offset_left = 98.0
-offset_top = 108.0
-offset_right = 163.0
-offset_bottom = 129.0
+offset_left = 88.0
+offset_top = 144.0
+offset_right = 188.0
+offset_bottom = 175.0
 text = "Next Round"
 
 [node name="Panel_GardenHealth" type="TextureRect" parent="." unique_id=944394532]
-offset_left = 42.0
-offset_top = 21.0
-offset_right = 278.0
-offset_bottom = 75.0
+offset_left = 28.0
+offset_top = 20.0
+offset_right = 638.0
+offset_bottom = 230.0
+texture = ExtResource("13_cof4p")
+stretch_mode = 2
 
 [node name="Label_GardernHealth_value" type="Label" parent="Panel_GardenHealth" unique_id=554986120]
 layout_mode = 0
-offset_left = 136.0
-offset_top = 17.0
-offset_right = 165.0
-offset_bottom = 40.0
+offset_left = 158.0
+offset_top = 18.0
+offset_right = 187.0
+offset_bottom = 41.0
 text = "100"
 script = ExtResource("8_ktti3")
 
 [node name="Label_GardernHealth" type="Label" parent="Panel_GardenHealth" unique_id=1301162178]
 layout_mode = 0
-offset_left = 14.0
-offset_top = 16.0
-offset_right = 203.0
-offset_bottom = 39.0
+offset_left = 36.0
+offset_top = 17.0
+offset_right = 225.0
+offset_bottom = 40.0
 text = "Garden Health:         /100"
 
 [node name="Panel_GameOver" type="TextureRect" parent="." unique_id=1590668259]
@@ -160,26 +174,30 @@ offset_left = 400.0
 offset_top = 261.0
 offset_right = 819.0
 offset_bottom = 473.0
+texture = ExtResource("10_h1mc3")
+stretch_mode = 3
 script = ExtResource("9_cgfq5")
 
 [node name="Label" type="Label" parent="Panel_GameOver" unique_id=2143645654]
 layout_mode = 0
-offset_left = 87.0
-offset_top = 30.0
-offset_right = 323.0
-offset_bottom = 97.0
-theme_override_font_sizes/font_size = 48
+offset_left = 89.0
+offset_top = 1.0
+offset_right = 325.0
+offset_bottom = 68.0
+theme_override_font_sizes/font_size = 32
 text = "You Loose"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Button" type="Button" parent="Panel_GameOver" unique_id=382014855]
 layout_mode = 0
-offset_left = 131.0
-offset_top = 140.0
-offset_right = 288.0
-offset_bottom = 171.0
-text = "Load Previous Save"
+offset_left = 168.0
+offset_top = 99.0
+offset_right = 246.0
+offset_bottom = 177.0
+icon = ExtResource("16_cof4p")
 
-[connection signal="mouse_entered" from="TextureRect/Button" to="TextureRect/Button" method="_on_mouse_entered"]
-[connection signal="pressed" from="TextureRect/Button" to="TextureRect/Button" method="_on_pressed"]
+[connection signal="mouse_entered" from="Button_StartRound" to="Button_StartRound" method="_on_mouse_entered"]
+[connection signal="pressed" from="Button_StartRound" to="Button_StartRound" method="_on_pressed"]
 [connection signal="button_down" from="Panel_RoundOver/Button" to="Panel_RoundOver" method="_on_button_button_down"]
 [connection signal="button_down" from="Panel_GameOver/Button" to="Panel_GameOver" method="_on_button_button_down"]
