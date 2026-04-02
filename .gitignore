@@ -1,3 +1,5 @@
-# Godot 4+ specific ignores
+# Godot auto-generated UID files
+*.gd.uid
+
+# Godot generated cache/editor files
 .godot/
-/android/
