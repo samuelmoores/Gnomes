@@ -1,26 +1,31 @@
 [gd_scene format=3 uid="uid://cyxd6laqbvcio"]
 
-[ext_resource type="Script" uid="uid://ulffx6dvpimf" path="res://scripts/towers/flamingo.gd" id="1_22yti"]
+[ext_resource type="Script" uid="uid://nyaovryf27va" path="res://scripts/towers/flamingo.gd" id="1_22yti"]
 [ext_resource type="Texture2D" uid="uid://cjahfir7mf1nl" path="res://art/Flamingo1.png" id="2_g0thn"]
 [ext_resource type="Script" uid="uid://cb63g5jleyxey" path="res://scripts/components/range_detector.gd" id="2_rangedet"]
 [ext_resource type="Texture2D" uid="uid://syn4dncqvqie" path="res://art/circle-34583_1280.png" id="3_truhj"]
-[ext_resource type="Script" uid="uid://s1veq2rg0xfp" path="res://scripts/components/flamingo_leg.gd" id="4_g0thn"]
-[ext_resource type="Script" uid="uid://bdntvpcdvafj" path="res://scripts/components/slow_aura.gd" id="5_gyw84"]
+[ext_resource type="Script" uid="uid://clcj2b4ucq817" path="res://scripts/components/flamingo_leg.gd" id="4_g0thn"]
+[ext_resource type="Script" uid="uid://b7gfl63nd7nxj" path="res://scripts/components/flamingo_launcher.gd" id="5_3lnbq"]
+[ext_resource type="Script" uid="uid://c2od1t74y4j4m" path="res://scripts/components/attack_timer.gd" id="6_ccorq"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_eort7"]
-radius = 74.0
+radius = 200.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f1vee"]
+size = Vector2(200, 200)
 
 [node name="Flamingo" type="Node2D" unique_id=1901038522]
 script = ExtResource("1_22yti")
 
 [node name="FlamingoSprite" type="Sprite2D" parent="." unique_id=630240792]
+rotation = 3.1415927
 scale = Vector2(0.05, 0.05)
 texture = ExtResource("2_g0thn")
 
 [node name="Sprite2D_Collision" type="Sprite2D" parent="." unique_id=1518637189]
 modulate = Color(1, 1, 1, 0.2509804)
-position = Vector2(1.0000005, 0)
-scale = Vector2(0.13242188, 0.12950163)
+position = Vector2(4.5, -1.5)
+scale = Vector2(0.36, 0.37)
 texture = ExtResource("3_truhj")
 
 [node name="RangeDetector" type="Area2D" parent="." unique_id=2112214880]
@@ -29,8 +34,21 @@ script = ExtResource("2_rangedet")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RangeDetector" unique_id=1090463235]
 shape = SubResource("CircleShape2D_eort7")
 
-[node name="FlamingoLeg" type="Node" parent="." unique_id=670514479]
+[node name="FlamingoLauncher" type="Node" parent="." unique_id=670514479]
+script = ExtResource("5_3lnbq")
+
+[node name="AttackTimer" type="Node" parent="." unique_id=1496070058]
+script = ExtResource("6_ccorq")
+
+[node name="FlamingoLeg" type="Node2D" parent="." unique_id=2123646002]
+visible = false
+
+[node name="LegSprite" type="Sprite2D" parent="FlamingoLeg" unique_id=833917166]
+
+[node name="Area2D" type="Area2D" parent="FlamingoLeg" unique_id=439612372]
 script = ExtResource("4_g0thn")
 
-[node name="SlowAura" type="Node" parent="." unique_id=1084250890]
-script = ExtResource("5_gyw84")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FlamingoLeg/Area2D" unique_id=1382092665]
+position = Vector2(0, -141.421)
+rotation = 0.7853982
+shape = SubResource("RectangleShape2D_f1vee")

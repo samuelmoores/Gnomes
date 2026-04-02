@@ -1,13 +1,17 @@
 extends Node2D
 
+@export var interval:= 1.5
+
 @onready var range_detector = $RangeDetector
-@onready var slow_aura = $SlowAura
-@onready var slow_aura_collision = $Sprite2D_Collision
+@onready var attack_timer = $AttackTimer
+@onready var flamingo_launcher = $FlamingoLauncher
+@onready var sprite_2d: Sprite2D = $Sprite2D_Collision
 
 
 func _ready() -> void:
-	range_detector.enemy_entered.connect(slow_aura.apply_slow)
-	range_detector.enemy_exited.connect(slow_aura.remove_slow) 
+	range_detector.enemy_entered.connect(attack_timer.add_enemy)
+	range_detector.enemy_exited.connect(attack_timer.remove_enemy)
+	attack_timer.attack_ready.connect(flamingo_launcher.launch)
 
 func RemoveColissionSprite() -> void:
-	slow_aura_collision.visible = false
+	sprite_2d.visible = false
