@@ -1,10 +1,10 @@
-[gd_scene format=3 uid="uid://budgd8413crlq"]
+[gd_scene load_steps=3 format=3 uid="uid://budgd8413crlq"]
 
-[ext_resource type="Script" uid="uid://b8trh3qc6kms" path="res://scripts/ui/PauseGame.gd" id="1_x0fpd"]
+[ext_resource type="Script" path="res://scripts/ui/PauseGame.gd" id="1_x0fpd"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_jdi0u"]
 
-[node name="Node2D" type="Node2D"]
+[node name="Node2D2" type="Node2D"]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 

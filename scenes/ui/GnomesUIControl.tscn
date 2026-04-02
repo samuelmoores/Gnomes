@@ -1,9 +1,8 @@
-[gd_scene format=3 uid="uid://dbuf281m3upvp"]
+[gd_scene load_steps=5 format=3 uid="uid://dbuf281m3upvp"]
 
-[ext_resource type="Script" uid="uid://thanr8ni377o" path="res://scripts/ui/GnomesUIControl.gd" id="1_dhc4p"]
-[ext_resource type="Script" uid="uid://bnvyqh08l4wei" path="res://scripts/ui/Camera2D.gd" id="1_v3n4u"]
-[ext_resource type="Script" uid="uid://cre88qhludtdj" path="res://scripts/ui/Control2.gd" id="3_tni8r"]
-[ext_resource type="Texture2D" uid="uid://c7x1npa5bmfvc" path="res://exports/plastic-pink-deep-girly-love-260nw-1254456904.jpg" id="4_376rx"]
+[ext_resource type="Script" path="res://scripts/ui/GnomesUIControl.gd" id="1_dhc4p"]
+[ext_resource type="Script" path="res://scripts/ui/Camera2D.gd" id="1_v3n4u"]
+[ext_resource type="Script" path="res://scripts/ui/Control2.gd" id="3_tni8r"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_aehwv"]
 specular_color = Color(0.741176, 0, 0.776471, 1)
@@ -56,32 +55,24 @@ offset_bottom = 5828.0
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer/Control2/HBoxContainer"]
 layout_mode = 2
-texture = ExtResource("4_376rx")
 
 [node name="TextureRect2" type="TextureRect" parent="CanvasLayer/Control2/HBoxContainer"]
 layout_mode = 2
-texture = ExtResource("4_376rx")
 
 [node name="TextureRect3" type="TextureRect" parent="CanvasLayer/Control2/HBoxContainer"]
 layout_mode = 2
-texture = ExtResource("4_376rx")
 
 [node name="TextureRect4" type="TextureRect" parent="CanvasLayer/Control2/HBoxContainer"]
 layout_mode = 2
-texture = ExtResource("4_376rx")
 
 [node name="TextureRect5" type="TextureRect" parent="CanvasLayer/Control2/HBoxContainer"]
 layout_mode = 2
-texture = ExtResource("4_376rx")
 
 [node name="TextureRect6" type="TextureRect" parent="CanvasLayer/Control2/HBoxContainer"]
 layout_mode = 2
-texture = ExtResource("4_376rx")
 
 [node name="TextureRect7" type="TextureRect" parent="CanvasLayer/Control2/HBoxContainer"]
 layout_mode = 2
-texture = ExtResource("4_376rx")
 
 [node name="TextureRect8" type="TextureRect" parent="CanvasLayer/Control2/HBoxContainer"]
 layout_mode = 2
-texture = ExtResource("4_376rx")
