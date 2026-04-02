@@ -2,9 +2,9 @@ extends Node
 
 signal attack_ready(enemy)
 
-@export var interval := 1.5
+@onready var interval = self.get_parent().interval
 
-var timer := interval
+var timer = interval
 var enemies_in_range:= []
 
 func add_enemy(enemy) -> void:

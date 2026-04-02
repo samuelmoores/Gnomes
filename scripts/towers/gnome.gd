@@ -1,5 +1,7 @@
 extends Node2D
 
+@export var interval:= 1.5
+
 @onready var range_detector = $RangeDetector
 @onready var attack_timer = $AttackTimer
 @onready var rock_launcher = $RockLauncher
