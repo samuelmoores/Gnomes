@@ -7,7 +7,7 @@ extends Node2D
 
 func _ready() -> void:
 	range_detector.enemy_entered.connect(slow_aura.apply_slow)
-	range_detector.enemy_exited.connect(slow_aura.remove_slow)
+	range_detector.enemy_exited.connect(slow_aura.remove_slow) 
 
 func RemoveColissionSprite() -> void:
 	slow_aura_collision.visible = false
