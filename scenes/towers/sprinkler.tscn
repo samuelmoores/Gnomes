@@ -1,9 +1,10 @@
 [gd_scene format=3 uid="uid://bkosus1gryp5c"]
 
-[ext_resource type="Script" uid="uid://nyaovryf27va" path="res://scripts/towers/flamingo.gd" id="1_hg22t"]
+[ext_resource type="Script" uid="uid://cpeylk340nmy5" path="res://scripts/towers/sprinkler.gd" id="1_hg22t"]
 [ext_resource type="Texture2D" uid="uid://hfqfwm6m07k0" path="res://art/icon.svg" id="2_taec3"]
 [ext_resource type="Texture2D" uid="uid://syn4dncqvqie" path="res://art/circle-34583_1280.png" id="3_s23gr"]
 [ext_resource type="Script" uid="uid://cb63g5jleyxey" path="res://scripts/components/range_detector.gd" id="4_ssvfg"]
+[ext_resource type="Script" uid="uid://b0gy26krr8f8c" path="res://scripts/components/sprinkle_launcher.gd" id="5_g8auc"]
 [ext_resource type="Script" uid="uid://c2od1t74y4j4m" path="res://scripts/components/attack_timer.gd" id="5_hg22t"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_eort7"]
@@ -11,6 +12,7 @@ radius = 100.0
 
 [node name="Sprinkler" type="Node2D" unique_id=1901038522]
 script = ExtResource("1_hg22t")
+interval = 1.5
 
 [node name="SprinklerSprite" type="Sprite2D" parent="." unique_id=630240792]
 scale = Vector2(0.05, 0.05)
@@ -29,6 +31,7 @@ script = ExtResource("4_ssvfg")
 shape = SubResource("CircleShape2D_eort7")
 
 [node name="SprinkleLauncher" type="Node" parent="." unique_id=1172195457]
+script = ExtResource("5_g8auc")
 
 [node name="AttackTimer" type="Node" parent="." unique_id=74471345]
 script = ExtResource("5_hg22t")

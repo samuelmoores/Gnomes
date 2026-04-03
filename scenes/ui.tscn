@@ -3,19 +3,20 @@
 [ext_resource type="PackedScene" uid="uid://ctreb214cypco" path="res://scenes/towers/gnome_panel.tscn" id="1_nt7q6"]
 [ext_resource type="Texture2D" uid="uid://j3h3cf77buyi" path="res://art/wenrexaassetsuicasual/Purple/Panels/Panel8.png" id="1_vdcm2"]
 [ext_resource type="PackedScene" uid="uid://dkejacuw7o5qo" path="res://scenes/towers/flamingo_panel.tscn" id="3_6rmj2"]
-[ext_resource type="Script" uid="uid://c8fsi6y0gr1bq" path="res://scripts/ui/start_round_button.gd" id="3_gdt2y"]
+[ext_resource type="Script" uid="uid://gqn7asd76uf1" path="res://scripts/ui/start_round_button.gd" id="3_gdt2y"]
 [ext_resource type="AudioStream" uid="uid://sbs4bma7pex7" path="res://audio/SFX/Click_Standard_00.mp3" id="3_yev5y"]
-[ext_resource type="Texture2D" uid="uid://dapyr23xe3eyo" path="res://art/pink GUI/Button12.png" id="4_6rmj2"]
+[ext_resource type="Texture2D" uid="uid://dapyr23xe3eyo" path="res://art/wenrexaassetsuicasual/Purple/ButtonsBig [Normal]/Button12.png" id="4_6rmj2"]
+[ext_resource type="PackedScene" uid="uid://d1clsr868qido" path="res://scenes/towers/sprinkler_panel.tscn" id="4_f7tlh"]
 [ext_resource type="AudioStream" uid="uid://bfoh55kp26f44" path="res://audio/SFX/Click_Standard_01.mp3" id="4_gdt2y"]
-[ext_resource type="Script" uid="uid://b0ajopbx4g6ym" path="res://scripts/ui/label_currency.gd" id="5_wm3ai"]
+[ext_resource type="Script" uid="uid://biwhlipov5sni" path="res://scripts/ui/label_currency.gd" id="5_wm3ai"]
 [ext_resource type="Script" uid="uid://b26rhicjxut14" path="res://scripts/ui/label_currency_gained_value.gd" id="6_8dubc"]
-[ext_resource type="Script" uid="uid://br8513iedofnm" path="res://scripts/ui/panel_round_over.gd" id="6_p7vwb"]
-[ext_resource type="Script" uid="uid://bsbxuycvit436" path="res://scripts/ui/label_gardern_health_value.gd" id="8_ktti3"]
-[ext_resource type="Texture2D" uid="uid://b1j1jigjskdrq" path="res://art/pink GUI/Panel2.png" id="8_vsj0x"]
-[ext_resource type="Script" uid="uid://c5axqeky2f3pj" path="res://scripts/ui/panel_game_over.gd" id="9_cgfq5"]
-[ext_resource type="Texture2D" uid="uid://05sbcskqhb7h" path="res://art/pink GUI/Panel3.png" id="10_h1mc3"]
-[ext_resource type="Texture2D" uid="uid://dk4pvn8cmsjoe" path="res://art/pink GUI/Bar5.png" id="13_cof4p"]
-[ext_resource type="Texture2D" uid="uid://bbifbper5wfd6" path="res://art/pink GUI/Button6.png" id="16_cof4p"]
+[ext_resource type="Script" uid="uid://q850nof6biay" path="res://scripts/ui/panel_round_over.gd" id="6_p7vwb"]
+[ext_resource type="Script" uid="uid://eiec25g5y0vo" path="res://scripts/ui/label_gardern_health_value.gd" id="8_ktti3"]
+[ext_resource type="Texture2D" uid="uid://b1j1jigjskdrq" path="res://art/wenrexaassetsuicasual/Purple/Panels/Panel2.png" id="8_vsj0x"]
+[ext_resource type="Script" uid="uid://6yaauyc8hl1y" path="res://scripts/ui/panel_game_over.gd" id="9_cgfq5"]
+[ext_resource type="Texture2D" uid="uid://05sbcskqhb7h" path="res://art/wenrexaassetsuicasual/Purple/Panels/Panel3.png" id="10_h1mc3"]
+[ext_resource type="Texture2D" uid="uid://dk4pvn8cmsjoe" path="res://art/wenrexaassetsuicasual/Purple/Bars2/Bar5.png" id="13_cof4p"]
+[ext_resource type="Texture2D" uid="uid://bbifbper5wfd6" path="res://art/wenrexaassetsuicasual/Purple/ButtonsBig [Normal]/Button6.png" id="16_cof4p"]
 
 [node name="UI" type="CanvasLayer" unique_id=1678204392]
 
@@ -50,6 +51,9 @@ offset_bottom = 290.0
 layout_mode = 2
 
 [node name="Panel2" parent="TextureRect_Towers/FlowContainer" unique_id=676561448 instance=ExtResource("3_6rmj2")]
+layout_mode = 2
+
+[node name="Panel3" parent="TextureRect_Towers/FlowContainer" unique_id=446965234 instance=ExtResource("4_f7tlh")]
 layout_mode = 2
 
 [node name="Button_StartRound" type="Button" parent="." unique_id=992358391]

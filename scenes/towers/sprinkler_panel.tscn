@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://d1clsr868qido"]
+
+[ext_resource type="Script" uid="uid://cxjiepxj8u85w" path="res://scripts/towers/tower_panel.gd" id="1_d3clm"]
+[ext_resource type="PackedScene" uid="uid://bkosus1gryp5c" path="res://scenes/towers/sprinkler.tscn" id="2_d3clm"]
+[ext_resource type="Texture2D" uid="uid://hfqfwm6m07k0" path="res://art/icon.svg" id="3_22h6d"]
+
+[node name="Panel" type="Panel" unique_id=386781174]
+custom_minimum_size = Vector2(80, 80)
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_d3clm")
+tower_scene = ExtResource("2_d3clm")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1124739805]
+position = Vector2(39.999996, 30)
+rotation = 3.1415927
+scale = Vector2(0.04, 0.038)
+texture = ExtResource("3_22h6d")
+
+[node name="PriceLabel" type="Label" parent="." unique_id=1705973438]
+layout_mode = 0
+offset_top = 57.0
+offset_right = 79.0
+offset_bottom = 80.0
+text = "00"
+horizontal_alignment = 1
+
+[connection signal="gui_input" from="." to="." method="_on_gui_input"]
