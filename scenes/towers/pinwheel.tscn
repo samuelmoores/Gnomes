@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://budyfiy6pktr7"]
+
+[ext_resource type="Script" uid="uid://dhyjcmygemlvs" path="res://scripts/towers/pinwheel.gd" id="1_6ftbp"]
+[ext_resource type="Texture2D" uid="uid://hfqfwm6m07k0" path="res://art/icon.svg" id="2_nt0xq"]
+[ext_resource type="Texture2D" uid="uid://syn4dncqvqie" path="res://art/circle-34583_1280.png" id="3_odl3j"]
+[ext_resource type="Script" uid="uid://cb63g5jleyxey" path="res://scripts/components/range_detector.gd" id="4_hfhse"]
+[ext_resource type="Script" uid="uid://bdntvpcdvafj" path="res://scripts/components/slow_aura.gd" id="5_bqkd5"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_eort7"]
+radius = 100.0
+
+[node name="Pinwheel" type="Node2D" unique_id=1901038522]
+script = ExtResource("1_6ftbp")
+
+[node name="PinwheelSprite" type="Sprite2D" parent="." unique_id=630240792]
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("2_nt0xq")
+
+[node name="Sprite2D_Collision" type="Sprite2D" parent="." unique_id=1518637189]
+modulate = Color(1, 1, 1, 0.2509804)
+position = Vector2(2.25, -0.5)
+scale = Vector2(0.18, 0.187)
+texture = ExtResource("3_odl3j")
+
+[node name="RangeDetector" type="Area2D" parent="." unique_id=2112214880]
+script = ExtResource("4_hfhse")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RangeDetector" unique_id=1090463235]
+shape = SubResource("CircleShape2D_eort7")
+
+[node name="SlowAura" type="Node" parent="." unique_id=1172195457]
+script = ExtResource("5_bqkd5")

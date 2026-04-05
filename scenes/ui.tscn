@@ -10,14 +10,14 @@
 [ext_resource type="AudioStream" uid="uid://bfoh55kp26f44" path="res://audio/SFX/Click_Standard_01.mp3" id="4_gdt2y"]
 [ext_resource type="Script" uid="uid://biwhlipov5sni" path="res://scripts/ui/label_currency.gd" id="5_wm3ai"]
 [ext_resource type="Script" uid="uid://b26rhicjxut14" path="res://scripts/ui/label_currency_gained_value.gd" id="6_8dubc"]
-[ext_resource type="Script" uid="uid://q850nof6biay" path="res://scripts/ui/panel_round_over.gd" id="6_p7vwb"]
+[ext_resource type="Script" uid="uid://q850nof6biay" path="res://scripts/ui/TextureReact_round.gd" id="6_p7vwb"]
 [ext_resource type="Script" uid="uid://eiec25g5y0vo" path="res://scripts/ui/label_gardern_health_value.gd" id="8_ktti3"]
 [ext_resource type="Texture2D" uid="uid://b1j1jigjskdrq" path="res://art/wenrexaassetsuicasual/Purple/Panels/Panel2.png" id="8_vsj0x"]
 [ext_resource type="Script" uid="uid://6yaauyc8hl1y" path="res://scripts/ui/panel_game_over.gd" id="9_cgfq5"]
 [ext_resource type="Texture2D" uid="uid://05sbcskqhb7h" path="res://art/wenrexaassetsuicasual/Purple/Panels/Panel3.png" id="10_h1mc3"]
 [ext_resource type="Texture2D" uid="uid://dk4pvn8cmsjoe" path="res://art/wenrexaassetsuicasual/Purple/Bars2/Bar5.png" id="13_cof4p"]
 [ext_resource type="Texture2D" uid="uid://bbifbper5wfd6" path="res://art/wenrexaassetsuicasual/Purple/ButtonsBig [Normal]/Button6.png" id="16_cof4p"]
-[ext_resource type="Script" path="res://scripts/ui/hud_controller.gd" id="17_hud"]
+[ext_resource type="Script" uid="uid://cgxeiv8kmqxgu" path="res://scripts/ui/hud_controller.gd" id="17_hud"]
 
 [node name="UI" type="CanvasLayer" unique_id=1678204392]
 script = ExtResource("17_hud")
@@ -56,6 +56,9 @@ layout_mode = 2
 layout_mode = 2
 
 [node name="Panel3" parent="TextureRect_Towers/FlowContainer" unique_id=446965234 instance=ExtResource("4_f7tlh")]
+layout_mode = 2
+
+[node name="Panel4" parent="TextureRect_Towers/FlowContainer" unique_id=1843252677 instance=ExtResource("4_f7tlh")]
 layout_mode = 2
 
 [node name="Button_StartRound" type="Button" parent="." unique_id=992358391]
