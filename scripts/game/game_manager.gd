@@ -8,11 +8,25 @@ var enemys_to_kill = 4
 var enemies_killed = 0
 var towers = []
 signal new_round
+signal round_started(wave: int)
+signal countdown_updated(seconds_left: int)
 var garden_health = 100
 var game_over = false
+var round_countdown_active = false
+var current_wave := 1
 
 func StartRound() -> void:
+	if start_round or end_round or game_over or round_countdown_active:
+		return
+
+	round_countdown_active = true
+	for seconds_left in [3, 2, 1]:
+		countdown_updated.emit(seconds_left)
+		await get_tree().create_timer(1.0).timeout
+
+	round_countdown_active = false
 	start_round = true
+	round_started.emit(current_wave)
 	
 func EndRound() -> void:
 	if currency_total + currency_earned < 30:
@@ -41,6 +55,9 @@ func SpendCurrency(amount: int) -> bool:
 	
 func NewRound() -> void:
 	currency_total += currency_earned
+	end_round = false
+	start_round = false
+	current_wave += 1
 	
 	if currency_total <= 0 or garden_health <= 0 or currency_total < 30:
 		game_over = true
@@ -50,8 +67,6 @@ func NewRound() -> void:
 	currency_earned = 0
 	enemies_killed = 0
 	enemys_to_kill += 2
-	end_round = false
-	start_round = false
 	for tower in towers:
 		tower.queue_free()
 	towers.clear()
@@ -71,11 +86,13 @@ func Restart() -> void:
 	currency_earned = 0
 	start_round = false
 	end_round = false
+	current_wave = 1
 	enemys_to_kill = 4
 	enemies_killed = 0
 	garden_health = 100
 	game_over = false
 	for tower in towers:
-		tower.queue_free()
+		if is_instance_valid(tower):
+			tower.queue_free()
 	towers.clear()
 	new_round.emit()

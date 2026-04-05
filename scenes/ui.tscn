@@ -17,8 +17,10 @@
 [ext_resource type="Texture2D" uid="uid://05sbcskqhb7h" path="res://art/wenrexaassetsuicasual/Purple/Panels/Panel3.png" id="10_h1mc3"]
 [ext_resource type="Texture2D" uid="uid://dk4pvn8cmsjoe" path="res://art/wenrexaassetsuicasual/Purple/Bars2/Bar5.png" id="13_cof4p"]
 [ext_resource type="Texture2D" uid="uid://bbifbper5wfd6" path="res://art/wenrexaassetsuicasual/Purple/ButtonsBig [Normal]/Button6.png" id="16_cof4p"]
+[ext_resource type="Script" path="res://scripts/ui/hud_controller.gd" id="17_hud"]
 
 [node name="UI" type="CanvasLayer" unique_id=1678204392]
+script = ExtResource("17_hud")
 
 [node name="TextureRect_Towers" type="TextureRect" parent="." unique_id=474009617]
 offset_left = 1030.0
