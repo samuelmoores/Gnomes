@@ -8,7 +8,7 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
-	if(GameManager.end_round):
+	if GameManager.end_round and not GameManager.game_won:
 		self.visible = true
 	else:
 		self.visible = false
@@ -16,4 +16,7 @@ func _process(_delta: float) -> void:
 
 func _on_button_button_down() -> void:
 	self.visible = false
-	GameManager.NewRound()
+	if GameManager.current_level >= GameManager.level_scenes.size():
+		GameManager.game_won = true
+	else:
+		GameManager.NewRound()

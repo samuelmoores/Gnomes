@@ -10,14 +10,15 @@
 [ext_resource type="AudioStream" uid="uid://bfoh55kp26f44" path="res://audio/SFX/Click_Standard_01.mp3" id="4_gdt2y"]
 [ext_resource type="Script" uid="uid://biwhlipov5sni" path="res://scripts/ui/label_currency.gd" id="5_wm3ai"]
 [ext_resource type="Script" uid="uid://b26rhicjxut14" path="res://scripts/ui/label_currency_gained_value.gd" id="6_8dubc"]
-[ext_resource type="Script" uid="uid://q850nof6biay" path="res://scripts/ui/TextureReact_round.gd" id="6_p7vwb"]
 [ext_resource type="Script" uid="uid://eiec25g5y0vo" path="res://scripts/ui/label_gardern_health_value.gd" id="8_ktti3"]
 [ext_resource type="Texture2D" uid="uid://b1j1jigjskdrq" path="res://art/wenrexaassetsuicasual/Purple/Panels/Panel2.png" id="8_vsj0x"]
-[ext_resource type="Script" uid="uid://6yaauyc8hl1y" path="res://scripts/ui/panel_game_over.gd" id="9_cgfq5"]
+[ext_resource type="Script" uid="uid://c3gou6v52m8u" path="res://scripts/ui/panel_game_over.gd" id="9_cgfq5"]
 [ext_resource type="Texture2D" uid="uid://05sbcskqhb7h" path="res://art/wenrexaassetsuicasual/Purple/Panels/Panel3.png" id="10_h1mc3"]
+[ext_resource type="Script" uid="uid://br8513iedofnm" path="res://scripts/ui/panel_round_over.gd" id="13_8k7j3"]
 [ext_resource type="Texture2D" uid="uid://dk4pvn8cmsjoe" path="res://art/wenrexaassetsuicasual/Purple/Bars2/Bar5.png" id="13_cof4p"]
 [ext_resource type="Texture2D" uid="uid://bbifbper5wfd6" path="res://art/wenrexaassetsuicasual/Purple/ButtonsBig [Normal]/Button6.png" id="16_cof4p"]
 [ext_resource type="Script" uid="uid://cgxeiv8kmqxgu" path="res://scripts/ui/hud_controller.gd" id="17_hud"]
+[ext_resource type="Script" uid="uid://bwinpanelscr1" path="res://scripts/ui/panel_win.gd" id="18_win1"]
 
 [node name="UI" type="CanvasLayer" unique_id=1678204392]
 script = ExtResource("17_hud")
@@ -109,13 +110,12 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Panel_RoundOver" type="TextureRect" parent="." unique_id=1165530528]
-visible = false
 offset_left = 950.0
 offset_top = 388.0
 offset_right = 1234.0
 offset_bottom = 549.0
 texture = ExtResource("10_h1mc3")
-script = ExtResource("6_p7vwb")
+script = ExtResource("13_8k7j3")
 
 [node name="Label_round_over" type="Label" parent="Panel_RoundOver" unique_id=119652810]
 layout_mode = 0
@@ -194,7 +194,7 @@ offset_top = 1.0
 offset_right = 325.0
 offset_bottom = 68.0
 theme_override_font_sizes/font_size = 32
-text = "You Loose"
+text = "You Lose"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -206,7 +206,37 @@ offset_right = 246.0
 offset_bottom = 177.0
 icon = ExtResource("16_cof4p")
 
+[node name="Panel_Win" type="TextureRect" parent="." unique_id=1590668260]
+offset_left = 400.0
+offset_top = 261.0
+offset_right = 819.0
+offset_bottom = 473.0
+texture = ExtResource("10_h1mc3")
+stretch_mode = 3
+visible = false
+script = ExtResource("18_win1")
+
+[node name="Label" type="Label" parent="Panel_Win" unique_id=2143645655]
+layout_mode = 0
+offset_left = 89.0
+offset_top = 1.0
+offset_right = 325.0
+offset_bottom = 68.0
+theme_override_font_sizes/font_size = 32
+text = "You Win!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="Panel_Win" unique_id=382014856]
+layout_mode = 0
+offset_left = 148.0
+offset_top = 120.0
+offset_right = 266.0
+offset_bottom = 155.0
+text = "Play Again"
+
 [connection signal="mouse_entered" from="Button_StartRound" to="Button_StartRound" method="_on_mouse_entered"]
 [connection signal="pressed" from="Button_StartRound" to="Button_StartRound" method="_on_pressed"]
 [connection signal="button_down" from="Panel_RoundOver/Button" to="Panel_RoundOver" method="_on_button_button_down"]
 [connection signal="button_down" from="Panel_GameOver/Button" to="Panel_GameOver" method="_on_button_button_down"]
+[connection signal="button_down" from="Panel_Win/Button" to="Panel_Win" method="_on_button_button_down"]

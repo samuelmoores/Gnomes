@@ -12,8 +12,16 @@ signal round_started(wave: int)
 signal countdown_updated(seconds_left: int)
 var garden_health = 100
 var game_over = false
+var game_won = false
 var round_countdown_active = false
 var current_wave := 1
+
+var current_level := 1
+var level_scenes := [
+	"res://scenes/Level_01.tscn",
+	"res://scenes/Level_02.tscn",
+	"res://scenes/Level_03.tscn",
+]
 
 func StartRound() -> void:
 	if start_round or end_round or game_over or round_countdown_active:
@@ -58,18 +66,26 @@ func NewRound() -> void:
 	end_round = false
 	start_round = false
 	current_wave += 1
-	
+
 	if currency_total <= 0 or garden_health <= 0 or currency_total < 30:
 		game_over = true
 		return
-	
-	new_round.emit()
+
 	currency_earned = 0
 	enemies_killed = 0
 	enemys_to_kill += 2
 	for tower in towers:
-		tower.queue_free()
+		if(tower != null):
+			tower.queue_free()
 	towers.clear()
+
+	LoadNextLevel()
+
+func LoadNextLevel() -> void:
+	current_level += 1
+	var next_index = (current_level - 1) % level_scenes.size()
+	get_tree().change_scene_to_file(level_scenes[next_index])
+	print(level_scenes[next_index])
 
 func AddTower(new_tower: Node2D) -> void:
 	towers.append(new_tower)
@@ -87,12 +103,14 @@ func Restart() -> void:
 	start_round = false
 	end_round = false
 	current_wave = 1
+	current_level = 1
 	enemys_to_kill = 4
 	enemies_killed = 0
 	garden_health = 100
 	game_over = false
+	game_won = false
 	for tower in towers:
 		if is_instance_valid(tower):
 			tower.queue_free()
 	towers.clear()
-	new_round.emit()
+	get_tree().change_scene_to_file(level_scenes[0])
