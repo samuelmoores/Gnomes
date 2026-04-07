@@ -1,0 +1,79 @@
+[gd_scene format=3 uid="uid://cxtd7pxs6d5tk"]
+
+[ext_resource type="Script" uid="uid://0eg0fvxnhy0m" path="res://scripts/game/game.gd" id="1_cny5q"]
+[ext_resource type="Texture2D" uid="uid://11gbap7osbnm" path="res://art/MapEasy.png" id="2_cny5q"]
+[ext_resource type="Script" uid="uid://d30dg1dlwyof2" path="res://scripts/enemies/enemy_spawner.gd" id="3_my5n3"]
+[ext_resource type="PackedScene" uid="uid://kymlmbj1wyts" path="res://scenes/GameManager.tscn" id="4_whvli"]
+[ext_resource type="PackedScene" uid="uid://dmydk21vaadmi" path="res://scenes/ui.tscn" id="5_bfcyv"]
+[ext_resource type="Script" uid="uid://c36dl1dukr6hm" path="res://scripts/enemies/enemy_end_trigger.gd" id="6_3qmt2"]
+[ext_resource type="Texture2D" uid="uid://c8stlh3ai5esn" path="res://art/flower_complete.png" id="7_2t47i"]
+[ext_resource type="Texture2D" uid="uid://bl8rm3ris2o0r" path="res://art/flowerstatue_0.png" id="8_bygkx"]
+[ext_resource type="Texture2D" uid="uid://burj8xiqi0uys" path="res://art/untitled_10-15-2024_01-57-48.png" id="9_6tmnm"]
+
+[sub_resource type="Curve2D" id="Curve2D_7mckg"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -635, 245, 0, 0, 0, 0, -468, 239, 0, 0, 0, 0, 51, 227, 0, 0, 0, 0, 98, 193, 0, 0, 0, 0, 108, 105, 0, 0, 0, 0, 4, 79, 0, 0, 0, 0, -349, 73, 0, 0, 0, 0, -381, 40, 0, 0, 0, 0, -387, -162, 0, 0, 0, 0, -364, -225, 0, 0, 0, 0, -308, -247, 0, 0, 0, 0, -237, -249, 0, 0, 0, 0, -182, -217, 0, 0, 0, 0, -163, -175, 0, 0, 0, 0, -158, -120, 0, 0, 0, 0, -159, -57, 0, 0, 0, 0, -127, -49, 0, 0, 0, 0, -41, -48, 0, 0, 0, 0, 64, -43, 0, 0, 0, 0, 162, -31, 0, 0, 0, 0, 225, -50, 0, 0, 0, 0, 246, -108, 0, 0, 0, 0, 243, -185, 0, 0, 0, 0, 239, -277, 0, 0, 0, 0, 276, -297, 0, 0, 0, 0, 367, -300, 0, 0, 0, 0, 458, -293, 0, 0, 0, 0, 473, -249, 0, 0, 0, 0, 476, -193, 0, 0, 0, 0, 478, -120, 0, 0, 0, 0, 487, -73, 0, 0, 0, 0, 500, 7, 0, 0, 0, 0, 482, 73, 0, 0, 0, 0, 432, 99, 0, 0, 0, 0, 346, 106, 0, 0, 0, 0, 279, 107, 0, 0, 0, 0, 244, 145, 0, 0, 0, 0, 256, 219, 0, 0, 0, 0, 350, 228, 0, 0, 0, 0, 481, 229, 0, 0, 0, 0, 615, 229, 0, 0, 0, 0, 710, 231)
+}
+point_count = 42
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5kwoq"]
+radius = 99.50377
+
+[node name="Node2D" type="Node2D" unique_id=2096707777]
+script = ExtResource("1_cny5q")
+
+[node name="MapEasy" type="Sprite2D" parent="." unique_id=1407354725]
+position = Vector2(640, 358)
+texture = ExtResource("2_cny5q")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=528014173]
+position = Vector2(643, 358)
+
+[node name="Path2D" type="Path2D" parent="." unique_id=553770072]
+position = Vector2(625, 373)
+curve = SubResource("Curve2D_7mckg")
+
+[node name="Node" type="Node" parent="Path2D" unique_id=1713786854]
+script = ExtResource("3_my5n3")
+
+[node name="GameManager" parent="." unique_id=942609086 instance=ExtResource("4_whvli")]
+position = Vector2(-1468, -471)
+
+[node name="UI" parent="." unique_id=996845106 instance=ExtResource("5_bfcyv")]
+
+[node name="CenterContainer" type="CenterContainer" parent="UI" unique_id=1532564883]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+metadata/_edit_use_anchors_ = true
+
+[node name="Gnomes" type="Node" parent="." unique_id=2085419680]
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1670858621]
+position = Vector2(1416, 569)
+script = ExtResource("6_3qmt2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1574847952]
+position = Vector2(-30, 39)
+shape = SubResource("CircleShape2D_5kwoq")
+
+[node name="Flowerstatue0" type="Sprite2D" parent="." unique_id=550821336]
+position = Vector2(1263, 414)
+texture = ExtResource("8_bygkx")
+
+[node name="FlowerComplete" type="Sprite2D" parent="." unique_id=1350921431]
+position = Vector2(1231, 497)
+texture = ExtResource("7_2t47i")
+
+[node name="Untitled10152024015748" type="Sprite2D" parent="." unique_id=112530946]
+position = Vector2(1210, 668)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("9_6tmnm")
+
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]

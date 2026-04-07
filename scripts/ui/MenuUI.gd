@@ -33,7 +33,7 @@ func _ready():
 
 func _on_play_pressed():
 	
-	button.get_tree().change_scene_to_file("res://scenes/Scene.tscn");
+	button.get_tree().change_scene_to_file("res://scenes/Level_01.tscn");
 	pass # Replace with function body.
 
 
