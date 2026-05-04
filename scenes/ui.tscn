@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://d1clsr868qido" path="res://scenes/towers/pinwheel_panel.tscn" id="4_f7tlh"]
 [ext_resource type="AudioStream" uid="uid://bfoh55kp26f44" path="res://audio/SFX/Click_Standard_01.mp3" id="4_gdt2y"]
 [ext_resource type="Script" uid="uid://biwhlipov5sni" path="res://scripts/ui/label_currency.gd" id="5_wm3ai"]
+[ext_resource type="PackedScene" uid="uid://bmgcskqbimyca" path="res://scenes/towers/bird_bath_panel.tscn" id="5_ycmcx"]
 [ext_resource type="Script" uid="uid://b26rhicjxut14" path="res://scripts/ui/label_currency_gained_value.gd" id="6_8dubc"]
 [ext_resource type="PackedScene" uid="uid://bli631tf37w1o" path="res://scenes/towers/sprinkler_panel.tscn" id="6_rlppe"]
 [ext_resource type="Script" uid="uid://eiec25g5y0vo" path="res://scripts/ui/label_gardern_health_value.gd" id="8_ktti3"]
@@ -55,6 +56,9 @@ offset_bottom = 290.0
 layout_mode = 2
 
 [node name="Panel2" parent="TextureRect_Towers/FlowContainer" unique_id=676561448 instance=ExtResource("3_6rmj2")]
+layout_mode = 2
+
+[node name="Panel3" parent="TextureRect_Towers/FlowContainer" unique_id=1811988824 instance=ExtResource("5_ycmcx")]
 layout_mode = 2
 
 [node name="Panel4" parent="TextureRect_Towers/FlowContainer" unique_id=1843252677 instance=ExtResource("4_f7tlh")]
