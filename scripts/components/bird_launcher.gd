@@ -32,14 +32,11 @@ func launch(enemy_body) -> void:
 
 	target = enemy_body
 	if target in attack_range.get_overlapping_bodies():
-		if enemy_in_arc(target):
-			var path_follow = target.get_parent()
-			var enemy_dir = path_follow.get("direction")
-			if enemy_dir == null:
-				enemy_dir = Vector2.ZERO
-
-			var target_position = target.global_position + enemy_dir * 15.0
-			var dir = (target_position - owner.global_position).normalized()
-			self.get_parent().set("rotation", dir.angle() - deg_to_rad(90))
+		var path_follow = target.get_parent()
+		var enemy_dir = path_follow.get("direction")
+		if enemy_dir == null:
+			enemy_dir = Vector2.ZERO
+		self.get_parent().set("rotation", enemy_dir.angle() + deg_to_rad(90))
 			
+		if enemy_in_arc(target):
 			target.take_damage()
