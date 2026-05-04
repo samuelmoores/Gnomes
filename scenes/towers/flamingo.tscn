@@ -1,12 +1,12 @@
 [gd_scene format=3 uid="uid://cyxd6laqbvcio"]
 
-[ext_resource type="Script" uid="uid://nyaovryf27va" path="res://scripts/towers/flamingo.gd" id="1_22yti"]
+[ext_resource type="Script" uid="uid://cj4y0y84ub11w" path="res://scripts/towers/flamingo.gd" id="1_22yti"]
 [ext_resource type="Texture2D" uid="uid://cjahfir7mf1nl" path="res://art/Flamingo1.png" id="2_g0thn"]
 [ext_resource type="Script" uid="uid://cb63g5jleyxey" path="res://scripts/components/range_detector.gd" id="2_rangedet"]
 [ext_resource type="Texture2D" uid="uid://syn4dncqvqie" path="res://art/circle-34583_1280.png" id="3_truhj"]
-[ext_resource type="Script" uid="uid://b7gfl63nd7nxj" path="res://scripts/components/flamingo_launcher.gd" id="5_3lnbq"]
-[ext_resource type="Script" uid="uid://c2od1t74y4j4m" path="res://scripts/components/attack_timer.gd" id="6_ccorq"]
-[ext_resource type="Texture2D" uid="uid://hfqfwm6m07k0" path="res://art/icon.svg" id="7_ccorq"]
+[ext_resource type="Script" uid="uid://ybaswrwkff0x" path="res://scripts/components/flamingo_launcher.gd" id="5_3lnbq"]
+[ext_resource type="Script" uid="uid://c4mqd3jrwgw03" path="res://scripts/components/attack_timer.gd" id="6_ccorq"]
+[ext_resource type="Texture2D" uid="uid://berw7tyn6jv1k" path="res://art/leg_throw.png" id="7_3lnbq"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_eort7"]
 radius = 200.0
@@ -42,6 +42,7 @@ visible = false
 position = Vector2(0, 141.421)
 
 [node name="LegSprite" type="Sprite2D" parent="FlamingoLeg" unique_id=833917166]
-rotation = 0.7853982
-scale = Vector2(1.5, 1.5)
-texture = ExtResource("7_ccorq")
+position = Vector2(-13.000001, -34.42101)
+rotation = -3.138102
+scale = Vector2(0.2901919, 0.45413697)
+texture = ExtResource("7_3lnbq")
