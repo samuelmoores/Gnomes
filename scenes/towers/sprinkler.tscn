@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://bkosus1gryp5c"]
 
-[ext_resource type="Script" uid="uid://cpeylk340nmy5" path="res://scripts/towers/sprinkler.gd" id="1_hg22t"]
-[ext_resource type="Texture2D" uid="uid://hfqfwm6m07k0" path="res://art/icon.svg" id="2_taec3"]
+[ext_resource type="Script" uid="uid://bf2ol1bjdl5sn" path="res://scripts/towers/sprinkler.gd" id="1_hg22t"]
+[ext_resource type="Texture2D" uid="uid://bx0vuk8v2t1ks" path="res://art/sprinkler.png" id="2_hg22t"]
 [ext_resource type="Texture2D" uid="uid://syn4dncqvqie" path="res://art/circle-34583_1280.png" id="3_s23gr"]
 [ext_resource type="Script" uid="uid://cb63g5jleyxey" path="res://scripts/components/range_detector.gd" id="4_ssvfg"]
-[ext_resource type="Script" uid="uid://b0gy26krr8f8c" path="res://scripts/components/sprinkle_launcher.gd" id="5_g8auc"]
-[ext_resource type="Script" uid="uid://c2od1t74y4j4m" path="res://scripts/components/attack_timer.gd" id="5_hg22t"]
+[ext_resource type="Script" uid="uid://b1b6cebn5etol" path="res://scripts/components/sprinkle_launcher.gd" id="5_g8auc"]
+[ext_resource type="Script" uid="uid://c4mqd3jrwgw03" path="res://scripts/components/attack_timer.gd" id="5_hg22t"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_eort7"]
 radius = 100.0
@@ -15,8 +15,8 @@ script = ExtResource("1_hg22t")
 interval = 1.5
 
 [node name="SprinklerSprite" type="Sprite2D" parent="." unique_id=630240792]
-scale = Vector2(0.05, 0.05)
-texture = ExtResource("2_taec3")
+scale = Vector2(0.29750004, 0.29750004)
+texture = ExtResource("2_hg22t")
 
 [node name="Sprite2D_Collision" type="Sprite2D" parent="." unique_id=1518637189]
 modulate = Color(1, 1, 1, 0.2509804)

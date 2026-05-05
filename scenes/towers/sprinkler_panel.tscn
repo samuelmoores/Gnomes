@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://bli631tf37w1o"]
 
-[ext_resource type="Script" uid="uid://cxjiepxj8u85w" path="res://scripts/towers/tower_panel.gd" id="1_8il2s"]
+[ext_resource type="Script" uid="uid://jmue38jifgtr" path="res://scripts/towers/tower_panel.gd" id="1_8il2s"]
 [ext_resource type="PackedScene" uid="uid://bkosus1gryp5c" path="res://scenes/towers/sprinkler.tscn" id="2_5m8mo"]
-[ext_resource type="Texture2D" uid="uid://hfqfwm6m07k0" path="res://art/icon.svg" id="3_eymbi"]
+[ext_resource type="Texture2D" uid="uid://bx0vuk8v2t1ks" path="res://art/sprinkler.png" id="3_d3clm"]
 
 [node name="Panel" type="Panel" unique_id=386781174]
 custom_minimum_size = Vector2(80, 80)
@@ -12,10 +12,9 @@ script = ExtResource("1_8il2s")
 tower_scene = ExtResource("2_5m8mo")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1124739805]
-position = Vector2(39.999996, 30)
-rotation = 3.1415927
-scale = Vector2(0.04, 0.038)
-texture = ExtResource("3_eymbi")
+position = Vector2(40, 25)
+scale = Vector2(0.19300002, 0.18335001)
+texture = ExtResource("3_d3clm")
 
 [node name="PriceLabel" type="Label" parent="." unique_id=1705973438]
 layout_mode = 0

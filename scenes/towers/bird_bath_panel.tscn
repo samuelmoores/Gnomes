@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://bmgcskqbimyca"]
 
-[ext_resource type="Script" uid="uid://cxjiepxj8u85w" path="res://scripts/towers/tower_panel.gd" id="1_yfnqi"]
+[ext_resource type="Script" uid="uid://jmue38jifgtr" path="res://scripts/towers/tower_panel.gd" id="1_yfnqi"]
 [ext_resource type="PackedScene" uid="uid://c4vgftqyyj5a8" path="res://scenes/towers/bird_bath.tscn" id="2_yfnqi"]
-[ext_resource type="Texture2D" uid="uid://hfqfwm6m07k0" path="res://art/icon.svg" id="3_yfnqi"]
+[ext_resource type="Texture2D" uid="uid://cad7ue4c3wkik" path="res://art/Bird1.png" id="3_yfnqi"]
 
 [node name="Panel" type="Panel" unique_id=386781174]
 custom_minimum_size = Vector2(80, 80)
@@ -12,9 +12,8 @@ script = ExtResource("1_yfnqi")
 tower_scene = ExtResource("2_yfnqi")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1124739805]
-position = Vector2(39.999996, 30)
-rotation = 3.1415927
-scale = Vector2(0.04, 0.038)
+position = Vector2(40, 33)
+scale = Vector2(0.18800002, 0.1786)
 texture = ExtResource("3_yfnqi")
 
 [node name="PriceLabel" type="Label" parent="." unique_id=1705973438]

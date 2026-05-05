@@ -1,12 +1,13 @@
 [gd_scene format=3 uid="uid://c4vgftqyyj5a8"]
 
-[ext_resource type="Script" uid="uid://bhnbdbw7acrpd" path="res://scripts/towers/bird_bath.gd" id="1_ucgto"]
+[ext_resource type="Script" uid="uid://lq67fohjxon0" path="res://scripts/towers/bird_bath.gd" id="1_ucgto"]
 [ext_resource type="Texture2D" uid="uid://syn4dncqvqie" path="res://art/circle-34583_1280.png" id="2_77ii5"]
-[ext_resource type="Texture2D" uid="uid://hfqfwm6m07k0" path="res://art/icon.svg" id="2_p8hac"]
+[ext_resource type="Texture2D" uid="uid://b1n5lsqd8oaxa" path="res://art/Bird Bath.png" id="3_77ii5"]
 [ext_resource type="Script" uid="uid://dw0fas8whw2k7" path="res://scripts/towers/bird.gd" id="3_lg0oh"]
 [ext_resource type="Script" uid="uid://cb63g5jleyxey" path="res://scripts/components/range_detector.gd" id="4_6olfe"]
-[ext_resource type="Script" uid="uid://c2od1t74y4j4m" path="res://scripts/components/attack_timer.gd" id="5_6yiys"]
-[ext_resource type="Script" uid="uid://ddlvlvf7rvgfp" path="res://scripts/components/bird_launcher.gd" id="6_lg0oh"]
+[ext_resource type="Script" uid="uid://c4mqd3jrwgw03" path="res://scripts/components/attack_timer.gd" id="5_6yiys"]
+[ext_resource type="Texture2D" uid="uid://cad7ue4c3wkik" path="res://art/Bird1.png" id="6_dniky"]
+[ext_resource type="Script" uid="uid://3bfrcs1p32yr" path="res://scripts/components/bird_launcher.gd" id="6_lg0oh"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_j2eoc"]
 radius = 2000.0
@@ -23,9 +24,9 @@ scale = Vector2(0.09, 0.09)
 texture = ExtResource("2_77ii5")
 
 [node name="BirdBathSprite" type="Sprite2D" parent="." unique_id=596096086]
-rotation = 3.1415927
-scale = Vector2(0.07, 0.07)
-texture = ExtResource("2_p8hac")
+rotation = 0.012217305
+scale = Vector2(0.102282524, 0.102282524)
+texture = ExtResource("3_77ii5")
 
 [node name="Bird" type="Node2D" parent="." unique_id=1775609947]
 position = Vector2(0, -100)
@@ -39,9 +40,10 @@ scale = Vector2(0.5, 0.5)
 shape = SubResource("CircleShape2D_j2eoc")
 
 [node name="BirdSprite" type="Sprite2D" parent="Bird" unique_id=323377946]
+position = Vector2(0, -50)
 rotation = 3.1415927
-scale = Vector2(0.07, 0.07)
-texture = ExtResource("2_p8hac")
+scale = Vector2(0.27519825, 0.27519825)
+texture = ExtResource("6_dniky")
 
 [node name="AttackTimer" type="Node" parent="Bird" unique_id=195276562]
 script = ExtResource("5_6yiys")
@@ -53,3 +55,13 @@ script = ExtResource("6_lg0oh")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Bird/Area2D" unique_id=528164753]
 shape = SubResource("CircleShape2D_lg0oh")
+
+[node name="ColorRect" type="ColorRect" parent="Bird" unique_id=547078194]
+visible = false
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -10.0
+offset_right = 10.0
+offset_bottom = 40.0
+grow_horizontal = 2
