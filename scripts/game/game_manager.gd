@@ -47,7 +47,6 @@ func EndRound() -> void:
 	
 func EnemyKilled() -> void:
 	enemies_killed += 1
-	print(enemies_killed, "     ", enemys_to_kill)
 	if(enemies_killed == enemys_to_kill):
 		EndRound()
 	
