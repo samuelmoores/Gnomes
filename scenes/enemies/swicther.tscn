@@ -1,21 +1,20 @@
 [gd_scene format=3 uid="uid://7542nhnkokqy"]
 
-[ext_resource type="Script" uid="uid://bfpky51rtaflk" path="res://scripts/enemies/enemy_movement.gd" id="1_x4uh0"]
-[ext_resource type="Script" uid="uid://bhsmvv3lvyi0" path="res://scripts/enemies/enemy_collision.gd" id="2_jn2m4"]
+[ext_resource type="Script" uid="uid://dwf65gqf6jjch" path="res://scripts/enemies/enemy_movement.gd" id="1_x4uh0"]
+[ext_resource type="Script" uid="uid://cj6kj5jxguyr6" path="res://scripts/enemies/enemy_collision.gd" id="2_jn2m4"]
 [ext_resource type="Texture2D" uid="uid://ghum38v4ncub" path="res://art/switcher.png" id="3_x4uh0"]
 [ext_resource type="PackedScene" uid="uid://c32jkq52nphgk" path="res://scenes/enemies/Health_bar.tscn" id="4_87pbo"]
-[ext_resource type="Script" uid="uid://fcqifflntkmq" path="res://scripts/enemies/swicther_data.gd" id="5_x4uh0"]
+[ext_resource type="Script" uid="uid://c6cvxtn28hp6a" path="res://scripts/enemies/swicther_data.gd" id="5_x4uh0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1"]
 size = Vector2(52, 36)
 
-[node name="Enemy" type="PathFollow2D" unique_id=198160575 groups=["enemy"]]
+[node name="Enemy2" type="PathFollow2D" unique_id=198160575 groups=["enemy"]]
 rotates = false
 loop = false
 script = ExtResource("1_x4uh0")
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1041317473 groups=["enemy"]]
-modulate = Color(1, 0.14117648, 1, 1)
 script = ExtResource("2_jn2m4")
 
 [node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D" unique_id=2054787616]
