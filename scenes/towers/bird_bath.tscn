@@ -53,12 +53,3 @@ script = ExtResource("6_lg0oh")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Bird/Area2D" unique_id=528164753]
 shape = SubResource("CircleShape2D_lg0oh")
-
-[node name="ColorRect" type="ColorRect" parent="Bird" unique_id=547078194]
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -10.0
-offset_right = 10.0
-offset_bottom = 40.0
-grow_horizontal = 2

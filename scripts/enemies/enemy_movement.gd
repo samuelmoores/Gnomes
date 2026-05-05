@@ -1,15 +1,16 @@
 extends PathFollow2D
 
-@export var default_speed := 100.0
-var current_speed := default_speed
+
 var speed_multiplier := 1.0
 
-
+var current_speed
 var direction
 var previous_position
 
 func _ready() -> void:
 	previous_position = global_position
+	var enemy_data = get_node_or_null("Data")
+	current_speed = enemy_data.speed
 
 
 func _process(delta):

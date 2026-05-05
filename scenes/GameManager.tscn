@@ -1,6 +1,9 @@
 [gd_scene format=3 uid="uid://kymlmbj1wyts"]
 
-[ext_resource type="Script" uid="uid://dvm4bxcu0hvyw" path="res://scripts/game/game_manager.gd" id="1_34tde"]
+[ext_resource type="Script" uid="uid://c31bpycy5b7lf" path="res://scripts/game/game_manager.gd" id="1_34tde"]
+[ext_resource type="PackedScene" uid="uid://yk3q8do4cdsh" path="res://scenes/rounds.tscn" id="2_qppyr"]
 
 [node name="GameManager" type="Node2D" unique_id=942609086]
 script = ExtResource("1_34tde")
+
+[node name="Rounds" parent="." unique_id=1749778226 instance=ExtResource("2_qppyr")]

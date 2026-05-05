@@ -1,10 +1,12 @@
 extends Node2D
 
+@onready var rounds = $Rounds
+
 var currency_total := 50
 var currency_earned = 0
 var start_round = false
 var end_round = false
-var enemys_to_kill = 4
+var enemys_to_kill
 var enemies_killed = 0
 var towers = []
 signal new_round
@@ -14,7 +16,7 @@ var garden_health = 100
 var game_over = false
 var game_won = false
 var round_countdown_active = false
-var current_wave := 1
+var current_wave := 0
 
 var current_level := 1
 var level_scenes := [
@@ -27,6 +29,7 @@ func StartRound() -> void:
 	if start_round or end_round or game_over or round_countdown_active:
 		return
 
+	enemys_to_kill = len(rounds.rounds[current_wave])
 	round_countdown_active = true
 	for seconds_left in [3, 2, 1]:
 		countdown_updated.emit(seconds_left)
@@ -44,6 +47,7 @@ func EndRound() -> void:
 	
 func EnemyKilled() -> void:
 	enemies_killed += 1
+	print(enemies_killed, "     ", enemys_to_kill)
 	if(enemies_killed == enemys_to_kill):
 		EndRound()
 	
@@ -62,6 +66,7 @@ func SpendCurrency(amount: int) -> bool:
 		
 	
 func NewRound() -> void:
+	print("cum")
 	currency_total += currency_earned
 	end_round = false
 	start_round = false
@@ -73,19 +78,12 @@ func NewRound() -> void:
 
 	currency_earned = 0
 	enemies_killed = 0
-	enemys_to_kill += 2
-	for tower in towers:
-		if(tower != null):
-			tower.queue_free()
-	towers.clear()
-
-	LoadNextLevel()
+	
 
 func LoadNextLevel() -> void:
 	current_level += 1
 	var next_index = (current_level - 1) % level_scenes.size()
 	get_tree().change_scene_to_file(level_scenes[next_index])
-	print(level_scenes[next_index])
 
 func AddTower(new_tower: Node2D) -> void:
 	towers.append(new_tower)
@@ -102,7 +100,7 @@ func Restart() -> void:
 	currency_earned = 0
 	start_round = false
 	end_round = false
-	current_wave = 1
+	current_wave = 0
 	current_level = 1
 	enemys_to_kill = 4
 	enemies_killed = 0

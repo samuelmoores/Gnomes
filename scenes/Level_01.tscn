@@ -1,11 +1,12 @@
 [gd_scene format=3 uid="uid://cxtd7pxs6d5tk"]
 
-[ext_resource type="Script" uid="uid://0eg0fvxnhy0m" path="res://scripts/game/game.gd" id="1_cny5q"]
+[ext_resource type="Script" uid="uid://b5ecumsfp2t84" path="res://scripts/game/game.gd" id="1_cny5q"]
 [ext_resource type="Texture2D" uid="uid://11gbap7osbnm" path="res://art/MapEasy.png" id="2_cny5q"]
-[ext_resource type="Script" uid="uid://d30dg1dlwyof2" path="res://scripts/enemies/enemy_spawner.gd" id="3_my5n3"]
+[ext_resource type="Script" uid="uid://b6lnvlyk0lt1a" path="res://scripts/enemies/enemy_spawner.gd" id="3_my5n3"]
+[ext_resource type="PackedScene" uid="uid://yk3q8do4cdsh" path="res://scenes/rounds.tscn" id="4_0bqrq"]
 [ext_resource type="PackedScene" uid="uid://kymlmbj1wyts" path="res://scenes/GameManager.tscn" id="4_whvli"]
 [ext_resource type="PackedScene" uid="uid://dmydk21vaadmi" path="res://scenes/ui.tscn" id="5_bfcyv"]
-[ext_resource type="Script" uid="uid://c36dl1dukr6hm" path="res://scripts/enemies/enemy_end_trigger.gd" id="6_3qmt2"]
+[ext_resource type="Script" uid="uid://dnsfcotmik5a5" path="res://scripts/enemies/enemy_end_trigger.gd" id="6_3qmt2"]
 [ext_resource type="Texture2D" uid="uid://c8stlh3ai5esn" path="res://art/flower_complete.png" id="7_2t47i"]
 [ext_resource type="Texture2D" uid="uid://bl8rm3ris2o0r" path="res://art/flowerstatue_0.png" id="8_bygkx"]
 [ext_resource type="Texture2D" uid="uid://burj8xiqi0uys" path="res://art/untitled_10-15-2024_01-57-48.png" id="9_6tmnm"]
@@ -35,6 +36,8 @@ curve = SubResource("Curve2D_7mckg")
 
 [node name="Node" type="Node" parent="Path2D" unique_id=1713786854]
 script = ExtResource("3_my5n3")
+
+[node name="Rounds" parent="Path2D/Node" unique_id=1749778226 instance=ExtResource("4_0bqrq")]
 
 [node name="GameManager" parent="." unique_id=942609086 instance=ExtResource("4_whvli")]
 position = Vector2(-1468, -471)

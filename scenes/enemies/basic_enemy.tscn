@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://c8xk2m5nqw3hv"]
+
+[ext_resource type="Script" uid="uid://dwf65gqf6jjch" path="res://scripts/enemies/enemy_movement.gd" id="1_wsh5r"]
+[ext_resource type="Script" uid="uid://cj6kj5jxguyr6" path="res://scripts/enemies/enemy_collision.gd" id="2_3ld4s"]
+[ext_resource type="Texture2D" uid="uid://dfnb2aoohqvjn" path="res://art/Aphid1.png" id="3_y18r1"]
+[ext_resource type="PackedScene" uid="uid://c32jkq52nphgk" path="res://scenes/enemies/Health_bar.tscn" id="4_yo4tp"]
+[ext_resource type="Script" uid="uid://bmlmepa436cq6" path="res://scripts/enemies/basic_enemy_data.gd" id="5_pksqs"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1"]
+size = Vector2(52, 36)
+
+[node name="Enemy" type="PathFollow2D" unique_id=198160575 groups=["enemy"]]
+rotates = false
+loop = false
+script = ExtResource("1_wsh5r")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1041317473 groups=["enemy"]]
+modulate = Color(1, 0.14117648, 1, 1)
+script = ExtResource("2_3ld4s")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D" unique_id=2054787616]
+position = Vector2(-5.684342e-14, -9)
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("3_y18r1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=1181759431 groups=["enemy"]]
+position = Vector2(0, -8)
+shape = SubResource("RectangleShape2D_1")
+
+[node name="Node2D" parent="CharacterBody2D" unique_id=945672166 instance=ExtResource("4_yo4tp")]
+visible = false
+position = Vector2(-21.000002, -51)
+scale = Vector2(0.4, 0.4)
+
+[node name="Data" type="Node" parent="." unique_id=1403298758]
+script = ExtResource("5_pksqs")
