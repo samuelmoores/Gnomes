@@ -28,10 +28,9 @@ position = Vector2(0, -8)
 shape = SubResource("RectangleShape2D_1")
 
 [node name="Node2D" parent="CharacterBody2D" unique_id=945672166 instance=ExtResource("4_87pbo")]
+visible = false
 position = Vector2(-21.000002, -51)
 scale = Vector2(0.4, 0.4)
 
-[node name="Data" type="Node" parent="." unique_id=1403298758]
+[node name="Data" type="Node" parent="." unique_id=2039996257]
 script = ExtResource("5_x4uh0")
-health = 4
-speed = 100

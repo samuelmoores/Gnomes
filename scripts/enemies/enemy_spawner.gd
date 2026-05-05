@@ -4,8 +4,6 @@ extends Node
 @export var tanky_enemy: PackedScene = preload("res://scenes/enemies/tanky_enemy.tscn")
 @export var fast_enemy: PackedScene = preload("res://scenes/enemies/fast_enemy.tscn")
 @export var swicther: PackedScene = preload("res://scenes/enemies/swicther.tscn")
-@export var spawn_interval_min := 1.0
-@export var spawn_interval_max := 3.0
 @export var max_enemies := 0
 @onready var rounds = $Rounds
 
@@ -49,4 +47,6 @@ func spawn_enemy(enemy_type) -> void:
 func reset_enemy_count() -> void:
 	enemy_count = 0
 	curr_round += 1
+	max_enemies = len(rounds.rounds[curr_round - 1])
 	curr_enemy = 0
+	_timer = 0

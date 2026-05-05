@@ -66,7 +66,6 @@ func SpendCurrency(amount: int) -> bool:
 		
 	
 func NewRound() -> void:
-	print("cum")
 	currency_total += currency_earned
 	end_round = false
 	start_round = false
@@ -78,6 +77,7 @@ func NewRound() -> void:
 
 	currency_earned = 0
 	enemies_killed = 0
+	new_round.emit()
 	
 
 func LoadNextLevel() -> void:

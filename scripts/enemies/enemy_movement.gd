@@ -11,6 +11,7 @@ func _ready() -> void:
 	previous_position = global_position
 	var enemy_data = get_node_or_null("Data")
 	current_speed = enemy_data.speed
+	print(current_speed)
 
 
 func _process(delta):

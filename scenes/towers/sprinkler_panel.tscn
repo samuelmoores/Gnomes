@@ -10,6 +10,7 @@ offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("1_8il2s")
 tower_scene = ExtResource("2_5m8mo")
+tower_price = 25
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1124739805]
 position = Vector2(40, 25)
