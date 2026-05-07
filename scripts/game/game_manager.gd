@@ -18,7 +18,7 @@ var game_won = false
 var round_countdown_active = false
 var current_wave := 0
 
-var current_level := 1
+var current_level = 0
 var level_scenes := [
 	"res://scenes/Level_01.tscn",
 	"res://scenes/Level_02.tscn",
@@ -110,4 +110,4 @@ func Restart() -> void:
 		if is_instance_valid(tower):
 			tower.queue_free()
 	towers.clear()
-	get_tree().change_scene_to_file(level_scenes[0])
+	get_tree().reload_current_scene()

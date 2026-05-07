@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://b5ecumsfp2t84" path="res://scripts/game/game.gd" id="1_kvlah"]
 [ext_resource type="Texture2D" uid="uid://b85uig53gy0nh" path="res://art/MapHard.png" id="2_kvlah"]
 [ext_resource type="Script" uid="uid://b6lnvlyk0lt1a" path="res://scripts/enemies/enemy_spawner.gd" id="3_gkf13"]
+[ext_resource type="PackedScene" uid="uid://yk3q8do4cdsh" path="res://scenes/rounds.tscn" id="4_0okjh"]
 [ext_resource type="PackedScene" uid="uid://kymlmbj1wyts" path="res://scenes/GameManager.tscn" id="4_w42qe"]
 [ext_resource type="PackedScene" uid="uid://dmydk21vaadmi" path="res://scenes/ui.tscn" id="5_yq1m0"]
 [ext_resource type="Script" uid="uid://dnsfcotmik5a5" path="res://scripts/enemies/enemy_end_trigger.gd" id="6_uc1hg"]
@@ -35,6 +36,8 @@ curve = SubResource("Curve2D_7mckg")
 
 [node name="Node" type="Node" parent="Path2D" unique_id=1713786854]
 script = ExtResource("3_gkf13")
+
+[node name="Rounds" parent="Path2D/Node" unique_id=1749778226 instance=ExtResource("4_0okjh")]
 
 [node name="GameManager" parent="." unique_id=942609086 instance=ExtResource("4_w42qe")]
 position = Vector2(-1468, -471)
